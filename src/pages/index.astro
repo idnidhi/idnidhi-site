@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import Spotlight from '../components/Spotlight.astro';
 ---
 
 <BaseLayout title="Nidhi Mehta Interior Design - Home">
@@ -9,6 +10,9 @@ import Footer from '../components/Footer.astro';
 
 	<!-- Hero Section -->
 	<section class="min-h-screen flex items-center justify-center px-4 pt-16 md:pt-20 relative overflow-hidden bg-black">
+		<!-- Spotlight Effect -->
+		<Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="#D4AF37" />
+
 		<!-- Background decoration -->
 		<div class="absolute inset-0 -z-10">
 			<div class="absolute top-1/4 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>

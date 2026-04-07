@@ -23,8 +23,8 @@ export default {
 				},
 			},
 			fontFamily: {
-				heading: ['Cinzel', 'serif'],
-				body: ['Josefin Sans', 'sans-serif'],
+				heading: ['Inter', 'system-ui', 'sans-serif'],
+				body: ['Inter', 'system-ui', 'sans-serif'],
 			},
 			fontSize: {
 				'display-sm': 'clamp(3rem, 8vw, 6rem)',
@@ -36,6 +36,21 @@ export default {
 			},
 			letterSpacing: {
 				'tighter-xl': '-0.05em',
+			},
+			animation: {
+				spotlight: "spotlight 2s ease .75s 1 forwards",
+			},
+			keyframes: {
+				spotlight: {
+					"0%": {
+						opacity: 0,
+						transform: "translate(-72%, -62%) scale(0.5)",
+					},
+					"100%": {
+						opacity: 1,
+						transform: "translate(-50%,-40%) scale(1)",
+					},
+				},
 			},
 		},
 	},

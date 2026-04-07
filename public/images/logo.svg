@@ -11,9 +11,10 @@
         font-size: 32px;
         fill: #D4AF37;
         text-anchor: middle;
-        font-family: Cinzel, serif;
+        font-family: Inter, system-ui, sans-serif;
         font-weight: 700;
         text-transform: uppercase;
+        letter-spacing: 0.05em;
       }
     </style>
   </defs>
