@@ -3,13 +3,13 @@
     <style>
       .cls-1 {
         fill: none;
-        stroke: #D4AF37;
+        stroke: #B76E79;
         stroke-width: 4px;
       }
 
       .cls-2 {
         font-size: 32px;
-        fill: #D4AF37;
+        fill: #B76E79;
         text-anchor: middle;
         font-family: Inter, system-ui, sans-serif;
         font-weight: 700;

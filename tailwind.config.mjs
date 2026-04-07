@@ -4,10 +4,10 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				primary: '#D4AF37', // Gold - primary accent
-				secondary: '#B8932F', // Darker gold
-				cta: '#D4AF37', // Gold for CTAs
-				accent: '#D4AF37', // Gold accent
+				primary: '#B76E79', // Rose Gold - primary accent
+				secondary: '#A3596B', // Darker rose gold
+				cta: '#B76E79', // Rose Gold for CTAs
+				accent: '#E0BFB8', // Light rose gold
 				black: {
 					DEFAULT: '#000000',
 					light: '#0A0A0A',
