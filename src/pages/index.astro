@@ -3,6 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import Spotlight from '../components/Spotlight.astro';
+import { getFeaturedProjects } from '../data/portfolio-projects';
+
+const featuredProjects = getFeaturedProjects().slice(0, 3);
 ---
 
 <BaseLayout title="Nidhi Mehta Interior Design - Home">
@@ -65,50 +68,28 @@ import Spotlight from '../components/Spotlight.astro';
 
 			<!-- Project Grid -->
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-				<!-- Project Card 1 -->
-				<a href="/portfolio" class="group relative overflow-hidden bg-gray-100 aspect-[4/5] cursor-pointer">
-					<img
-						src="/images/portfolio/project-1.jpg"
-						alt="Modern Living Space"
-						class="absolute inset-0 w-full h-full object-cover"
-						loading="lazy"
-					/>
-					<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-					<div class="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-						<h3 class="font-heading text-2xl font-semibold text-white mb-2">Modern Living Space</h3>
-						<p class="text-sm text-gray-300 uppercase tracking-wider">Residential</p>
-					</div>
-				</a>
-
-				<!-- Project Card 2 -->
-				<a href="/portfolio" class="group relative overflow-hidden bg-gray-100 aspect-[4/5] cursor-pointer">
-					<img
-						src="/images/portfolio/project-4.jpg"
-						alt="Family Room Design"
-						class="absolute inset-0 w-full h-full object-cover"
-						loading="lazy"
-					/>
-					<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-					<div class="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-						<h3 class="font-heading text-2xl font-semibold text-white mb-2">Family Room Design</h3>
-						<p class="text-sm text-gray-300 uppercase tracking-wider">Residential</p>
-					</div>
-				</a>
-
-				<!-- Project Card 3 -->
-				<a href="/portfolio" class="group relative overflow-hidden bg-gray-100 aspect-[4/5] cursor-pointer">
-					<img
-						src="/images/portfolio/project-7.jpg"
-						alt="Contemporary Seating"
-						class="absolute inset-0 w-full h-full object-cover"
-						loading="lazy"
-					/>
-					<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-					<div class="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-						<h3 class="font-heading text-2xl font-semibold text-white mb-2">Contemporary Seating</h3>
-						<p class="text-sm text-gray-300 uppercase tracking-wider">Commercial</p>
-					</div>
-				</a>
+				{featuredProjects.map((project) => (
+					<a
+						href={`/projects/${project.code.toLowerCase()}`}
+						class="group relative overflow-hidden bg-gray-100 aspect-[4/5] cursor-pointer"
+					>
+						<img
+							src={project.coverImage}
+							alt={project.title}
+							class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+							loading="lazy"
+						/>
+						<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+							<div class="absolute bottom-0 left-0 right-0 p-6 translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+								<span class="inline-block px-3 py-1 bg-primary text-black text-xs font-mono font-semibold tracking-wide mb-3">
+									{project.code}
+								</span>
+								<h3 class="font-heading text-2xl font-semibold text-white mb-2">{project.title}</h3>
+								<p class="text-sm text-gray-300 uppercase tracking-wider">{project.category}</p>
+							</div>
+						</div>
+					</a>
+				))}
 			</div>
 
 			<div class="text-center mt-12">
