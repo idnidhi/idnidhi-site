@@ -1,0 +1,190 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Nidhi Mehta Interior Design - Home">
+	<Navigation />
+
+	<!-- Hero Section -->
+	<section class="min-h-screen flex items-center justify-center px-4 pt-16 md:pt-20 relative overflow-hidden">
+		<!-- Background decoration -->
+		<div class="absolute inset-0 -z-10">
+			<div class="absolute top-1/4 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+			<div class="absolute bottom-1/4 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+		</div>
+
+		<div class="max-w-7xl mx-auto text-center">
+			<h1 class="font-heading font-bold text-display-lg leading-none tracking-tighter-xl mb-6 md:mb-8">
+				<span class="block text-text-dark">Transforming</span>
+				<span class="block text-text-dark">Spaces</span>
+			</h1>
+
+			<p class="text-lg md:text-2xl text-text-light max-w-2xl mx-auto mb-12 leading-relaxed">
+				Creating timeless interior experiences that blend elegance, functionality, and your unique story.
+			</p>
+
+			<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+				<a
+					href="/portfolio"
+					class="inline-block px-8 py-4 bg-primary text-white font-medium uppercase tracking-wider text-sm hover:bg-primary/90 transition-all duration-300 hover:scale-105 cursor-pointer"
+				>
+					View Portfolio
+				</a>
+				<a
+					href="/contact"
+					class="inline-block px-8 py-4 border-2 border-text-dark text-text-dark font-medium uppercase tracking-wider text-sm hover:bg-text-dark hover:text-white transition-all duration-300 hover:scale-105 cursor-pointer"
+				>
+					Start Your Project
+				</a>
+			</div>
+		</div>
+
+		<!-- Scroll indicator -->
+		<div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+			<svg class="w-6 h-6 text-text-light" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+			</svg>
+		</div>
+	</section>
+
+	<!-- Featured Projects Preview -->
+	<section class="py-section px-4">
+		<div class="max-w-7xl mx-auto">
+			<div class="text-center mb-16">
+				<h2 class="font-heading text-4xl md:text-6xl font-bold text-text-dark mb-4">Featured Work</h2>
+				<p class="text-lg text-text-light max-w-2xl mx-auto">
+					A curated selection of our most inspiring interior design projects.
+				</p>
+			</div>
+
+			<!-- Project Grid (placeholder - will be populated with actual projects) -->
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+				<!-- Project Card 1 -->
+				<div class="group relative overflow-hidden bg-gray-100 aspect-[4/5] cursor-pointer">
+					<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+					<div class="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+						<h3 class="font-heading text-2xl font-semibold text-white mb-2">Modern Residence</h3>
+						<p class="text-sm text-gray-300 uppercase tracking-wider">Residential</p>
+					</div>
+				</div>
+
+				<!-- Project Card 2 -->
+				<div class="group relative overflow-hidden bg-gray-100 aspect-[4/5] cursor-pointer">
+					<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+					<div class="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+						<h3 class="font-heading text-2xl font-semibold text-white mb-2">Luxury Villa</h3>
+						<p class="text-sm text-gray-300 uppercase tracking-wider">Residential</p>
+					</div>
+				</div>
+
+				<!-- Project Card 3 -->
+				<div class="group relative overflow-hidden bg-gray-100 aspect-[4/5] cursor-pointer">
+					<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+					<div class="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+						<h3 class="font-heading text-2xl font-semibold text-white mb-2">Boutique Hotel</h3>
+						<p class="text-sm text-gray-300 uppercase tracking-wider">Commercial</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="text-center mt-12">
+				<a
+					href="/portfolio"
+					class="inline-block px-8 py-4 border-2 border-text-dark text-text-dark font-medium uppercase tracking-wider text-sm hover:bg-text-dark hover:text-white transition-all duration-300 hover:scale-105 cursor-pointer"
+				>
+					View All Projects
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Services Overview -->
+	<section class="py-section px-4 bg-text-dark text-white">
+		<div class="max-w-7xl mx-auto">
+			<div class="text-center mb-16">
+				<h2 class="font-heading text-4xl md:text-6xl font-bold mb-4">What We Do</h2>
+				<p class="text-lg text-gray-300 max-w-2xl mx-auto">
+					Comprehensive interior design services tailored to your vision.
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+				<!-- Service 1 -->
+				<div class="text-center">
+					<div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+						<svg class="w-12 h-12 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+						</svg>
+					</div>
+					<h3 class="font-heading text-2xl font-semibold mb-3">Residential Design</h3>
+					<p class="text-gray-300 leading-relaxed">
+						Transform your home into a personalized sanctuary that reflects your lifestyle and aspirations.
+					</p>
+				</div>
+
+				<!-- Service 2 -->
+				<div class="text-center">
+					<div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+						<svg class="w-12 h-12 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+						</svg>
+					</div>
+					<h3 class="font-heading text-2xl font-semibold mb-3">Commercial Spaces</h3>
+					<p class="text-gray-300 leading-relaxed">
+						Create inspiring workspaces that enhance productivity and embody your brand identity.
+					</p>
+				</div>
+
+				<!-- Service 3 -->
+				<div class="text-center">
+					<div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+						<svg class="w-12 h-12 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+						</svg>
+					</div>
+					<h3 class="font-heading text-2xl font-semibold mb-3">Full Consultation</h3>
+					<p class="text-gray-300 leading-relaxed">
+						From concept to completion, we guide every step of your interior transformation journey.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-section px-4">
+		<div class="max-w-4xl mx-auto text-center">
+			<h2 class="font-heading text-4xl md:text-6xl font-bold text-text-dark mb-6">
+				Ready to Transform Your Space?
+			</h2>
+			<p class="text-lg md:text-xl text-text-light mb-10 leading-relaxed">
+				Let's collaborate to create an interior that tells your unique story.
+			</p>
+			<a
+				href="/contact"
+				class="inline-block px-10 py-5 bg-cta text-white font-medium uppercase tracking-wider text-sm hover:bg-cta/90 transition-all duration-300 hover:scale-105 cursor-pointer"
+			>
+				Get In Touch
+			</a>
+		</div>
+	</section>
+
+	<Footer />
+</BaseLayout>
+
+<style>
+	@keyframes bounce {
+		0%, 100% {
+			transform: translateY(0) translateX(-50%);
+		}
+		50% {
+			transform: translateY(-10px) translateX(-50%);
+		}
+	}
+
+	.animate-bounce {
+		animation: bounce 2s infinite;
+	}
+</style>

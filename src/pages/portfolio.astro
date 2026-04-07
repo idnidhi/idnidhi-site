@@ -1,0 +1,195 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+// Sample portfolio data - replace with actual data
+const projects = [
+	{ id: 1, title: 'Modern Residence', category: 'residential', image: '', description: 'A contemporary home blending minimalist aesthetics with warm comfort.' },
+	{ id: 2, title: 'Luxury Villa', category: 'residential', image: '', description: 'Opulent interiors that redefine luxury living.' },
+	{ id: 3, title: 'Boutique Hotel', category: 'commercial', image: '', description: 'A unique hospitality experience through thoughtful design.' },
+	{ id: 4, title: 'Corporate Office', category: 'commercial', image: '', description: 'Productive workspace with inspiring design elements.' },
+	{ id: 5, title: 'Beach House', category: 'residential', image: '', description: 'Coastal living at its finest with natural materials.' },
+	{ id: 6, title: 'Restaurant Design', category: 'hospitality', image: '', description: 'Ambient dining space that enhances the culinary experience.' },
+	{ id: 7, title: 'Penthouse Suite', category: 'residential', image: '', description: 'Sky-high luxury with panoramic views.' },
+	{ id: 8, title: 'Spa & Wellness', category: 'hospitality', image: '', description: 'Serene sanctuary for relaxation and rejuvenation.' },
+	{ id: 9, title: 'Showroom Design', category: 'commercial', image: '', description: 'Brand identity brought to life through spatial design.' },
+];
+---
+
+<BaseLayout title="Portfolio - Nidhi Mehta Interior Design" description="Explore our curated collection of interior design projects spanning residential, commercial, and hospitality spaces.">
+	<Navigation />
+
+	<!-- Hero Section -->
+	<section class="pt-32 pb-16 px-4 bg-gradient-to-b from-background to-white">
+		<div class="max-w-7xl mx-auto text-center">
+			<h1 class="font-heading font-bold text-display-sm md:text-display leading-none tracking-tighter-xl mb-6">
+				Our Work
+			</h1>
+			<p class="text-lg md:text-xl text-text-light max-w-3xl mx-auto leading-relaxed">
+				Every space tells a story. Explore our portfolio of transformative interior design projects that blend artistry with functionality.
+			</p>
+		</div>
+	</section>
+
+	<!-- Filter Section -->
+	<section class="py-8 px-4 sticky top-16 md:top-20 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200">
+		<div class="max-w-7xl mx-auto">
+			<div class="flex flex-wrap justify-center gap-3">
+				<button
+					class="filter-btn active px-6 py-2 text-sm uppercase tracking-wider font-medium border-2 transition-all duration-300 cursor-pointer"
+					data-filter="all"
+				>
+					All Projects
+				</button>
+				<button
+					class="filter-btn px-6 py-2 text-sm uppercase tracking-wider font-medium border-2 transition-all duration-300 cursor-pointer"
+					data-filter="residential"
+				>
+					Residential
+				</button>
+				<button
+					class="filter-btn px-6 py-2 text-sm uppercase tracking-wider font-medium border-2 transition-all duration-300 cursor-pointer"
+					data-filter="commercial"
+				>
+					Commercial
+				</button>
+				<button
+					class="filter-btn px-6 py-2 text-sm uppercase tracking-wider font-medium border-2 transition-all duration-300 cursor-pointer"
+					data-filter="hospitality"
+				>
+					Hospitality
+				</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Portfolio Grid -->
+	<section class="py-16 px-4">
+		<div class="max-w-7xl mx-auto">
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+				{projects.map((project) => (
+					<div
+						class="project-card group relative overflow-hidden bg-gray-100 cursor-pointer transition-opacity duration-300"
+						data-category={project.category}
+						style="aspect-ratio: 4/5"
+					>
+						<!-- Placeholder for image -->
+						<div class="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+							<span class="text-gray-400 font-heading text-xl">{project.title}</span>
+						</div>
+
+						<!-- Hover Overlay -->
+						<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+							<div class="absolute bottom-0 left-0 right-0 p-6 translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+								<p class="text-xs text-accent uppercase tracking-widest font-medium mb-2">{project.category}</p>
+								<h3 class="font-heading text-2xl md:text-3xl font-semibold text-white mb-3">{project.title}</h3>
+								<p class="text-sm text-gray-200 leading-relaxed mb-4">{project.description}</p>
+								<span class="inline-flex items-center text-white text-sm font-medium group-hover:gap-2 transition-all">
+									View Project
+									<svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+									</svg>
+								</span>
+							</div>
+						</div>
+					</div>
+				))}
+			</div>
+
+			<!-- Empty State (hidden by default, shown when no results) -->
+			<div id="empty-state" class="hidden text-center py-20">
+				<svg class="w-16 h-16 mx-auto text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+				</svg>
+				<p class="text-xl text-text-light">No projects found in this category.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-16 px-4 bg-text-dark text-white">
+		<div class="max-w-4xl mx-auto text-center">
+			<h2 class="font-heading text-3xl md:text-5xl font-bold mb-4">
+				Let's Create Your Dream Space
+			</h2>
+			<p class="text-lg text-gray-300 mb-8 leading-relaxed">
+				Ready to start your interior transformation journey?
+			</p>
+			<a
+				href="/contact"
+				class="inline-block px-10 py-4 bg-accent text-text-dark font-medium uppercase tracking-wider text-sm hover:bg-accent/90 transition-all duration-300 hover:scale-105 cursor-pointer"
+			>
+				Get In Touch
+			</a>
+		</div>
+	</section>
+
+	<Footer />
+</BaseLayout>
+
+<style>
+	.filter-btn {
+		border-color: #1E293B;
+		color: #1E293B;
+		background-color: white;
+	}
+
+	.filter-btn:hover {
+		background-color: #1E293B;
+		color: white;
+	}
+
+	.filter-btn.active {
+		background-color: #1E293B;
+		color: white;
+	}
+
+	.project-card {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	.project-card.hidden-filter {
+		opacity: 0;
+		transform: scale(0.95);
+		pointer-events: none;
+	}
+</style>
+
+<script>
+	// Filter functionality
+	const filterButtons = document.querySelectorAll('.filter-btn');
+	const projectCards = document.querySelectorAll('.project-card');
+	const emptyState = document.getElementById('empty-state');
+
+	filterButtons.forEach((button) => {
+		button.addEventListener('click', () => {
+			const filter = button.getAttribute('data-filter');
+
+			// Update active button
+			filterButtons.forEach((btn) => btn.classList.remove('active'));
+			button.classList.add('active');
+
+			// Filter projects
+			let visibleCount = 0;
+			projectCards.forEach((card) => {
+				const category = card.getAttribute('data-category');
+
+				if (filter === 'all' || category === filter) {
+					card.classList.remove('hidden-filter');
+					visibleCount++;
+				} else {
+					card.classList.add('hidden-filter');
+				}
+			});
+
+			// Show/hide empty state
+			if (visibleCount === 0) {
+				emptyState?.classList.remove('hidden');
+			} else {
+				emptyState?.classList.add('hidden');
+			}
+		});
+	});
+</script>

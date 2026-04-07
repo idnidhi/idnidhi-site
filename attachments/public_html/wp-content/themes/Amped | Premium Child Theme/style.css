@@ -1,0 +1,223 @@
+/* 
+ Theme Name:     LoveDivi | Go Designs
+ Author:         Graeme Wright
+ Author URI:     http://lovedivi.com/
+ Template:       Divi
+ Version:        Version Divi One
+ Description:   A Free Divi Child Theme for Version 2.7+
+Developed by Graeme Wright ©2016
+ Wordpress Version: 4.5.2
+*/ 
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/* ----------- [ PUT YOUR CUSTOM CSS BELOW THIS LINE -- DO NOT EDIT ABOVE THIS LINE ]--------------------------- */ 
+/*---------------------------------------------------------------------------------------------------------------*/
+
+
+
+/*----[ BORDER AROUND IMAGES ]-----*/
+.spot-image {
+border: solid 1px #fff!important ;
+box-shadow: 0 0 0 10px rgba(29,29,29,0.1)!important ;
+}
+
+
+/*----------[SOCIAL MEDIA ICONS]------------*/
+
+/* This centres the social media icons*/
+ul.et_pb_social_media_follow { 
+width:100%; 
+text-align:center; 
+margin: 0 0 0 0 ; 
+}
+ .et_pb_social_media_follow li { 
+float:none; 
+display:inline-block; 
+}
+
+/* To reduce the background size of each social media icon*/
+.et_pb_social_media_follow li a.icon {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+background-color: transparent !important ;
+}
+
+/*To reduce the icon font in the center of the icon*/
+.et_pb_social_media_follow li a.icon::before {
+    display: block;
+    width: 28px;
+    height: 28px;
+    color: #c9c9c9;
+    font-size: 16px;
+    line-height: 32px;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+
+/* Changes the hover color icon social media icon*/
+.et_pb_social_media_follow li a.icon:hover::before {
+    color: #0C71C3 !important ; /* Change this colour here */
+}
+/*-----------[SOCIAL MEDIA ICON END]--------------------*/
+
+
+/*--- [ This changes your header and paragraph text ] ---*/
+
+.header-text { color: #404040!important; 
+font-size: 48px!important; 
+font-weight: 300!important;
+margin: 5px 0!important; 
+}
+
+ .section-body { color: #555!important; 
+font-size: 21px!important; 
+font-weight: 200!important; 
+line-height: 1.4!important;
+ }
+
+
+/*--- [ This creates a black main header Nav bar background ] ---*/
+.et_fixed_nav #main-header, 
+.et_fixed_nav #top-header {
+background-color:#000!important ; /* Change this color to change nav bar background*/
+box-shadow: 0 0 0 10px rgba(29,29,29,0.5); /*remove this line to remove main header transparent border*/
+}
+
+/*---[Transparent border on fullwidth header]-----*/
+.et_pb_fullwidth_header_container {
+border-bottom: solid 10px rgba(29,29,29,0.5)!important ;
+width: 100% ;
+}
+
+
+
+/*----------[MOBILE MENU EDITS]----------------*/
+/*----This creates a white box around mobile menu button---*/
+.mobile_menu_bar:before {
+background-color: #fff!important ; 
+padding: 5px 5px 5px 5px ;
+}
+
+.mobile_menu_bar:before {
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 32px;
+    content: "\61";
+    cursor: pointer;
+ display:block;
+    -webkit-transform: rotate(-90deg); 
+    -moz-transform: rotate(-90deg); 
+}
+
+/* ---This creates a black opacity on the background of the mobile dropdown menu---*/
+.et_mobile_menu {
+    background-color: rgba(0, 0, 0, 0.5)!important;
+}
+
+/*--------{BACK TO TOP BUTTON]------------*/
+/* -- Reverses the color of the back-to-top button ---*/
+.et_pb_scroll_top.et-pb-icon {
+    color: #fff!important ;
+background: #0C71C3!important ; 
+}
+
+
+/*-----------------[Contact CTA Menu Button]----------------*/
+
+/* style the cta-button */
+
+            .cta-button {border-radius: 0px;}
+            .cta-button a {color: #fff!important;}
+            li.cta-button {
+                background-color:#0C71C3; /*edit here for background colour*/
+                 border: solid 2px #0C71C3 ;/*edit here for border colour*/
+                text-align: center; 
+                padding: 7px 14px 14px!important;
+border-top-left-radius: 1.2em; 
+ border-top-right-radius: 1.2em; 
+
+border-bottom-right-radius: 1.2em;                }
+
+/*--------[ CTA HOVER ] ------------------*/
+li.cta-button:hover {
+background-color:#F86136 ; /* edit here for hover colour*/
+border: solid 2px #F86136 ; /*edit here for hover border colour*/
+}
+.cta-button a:hover {color:#000000!important;}
+ 
+   @media only screen and (min-width : 981px) {
+            li.cta-button {height: 33px;}}
+
+/*----------------[CTA Menu button end]------------------*/
+
+
+@media only screen and ( max-width: 479px ) {
+  li.cta-button {
+padding: 0px 0px 0px!important;}
+}
+
+@media only screen and ( min-width: 480px ) and ( max-width: 767px ) {
+   li.cta-button {
+padding: 0px 0px 0px!important;}
+}
+
+@media only screen and ( min-width: 768px ) and ( max-width: 980px ) {
+   li.cta-button {
+padding: 0px 0px 0px!important;}
+}
+
+/* Tablets in landscape mode (981-1100px) */
+@media only screen and ( min-width: 768px ) and ( max-width: 1100px ) { 
+   #et_mobile_nav_menu { display:block }
+#top-menu-nav { display:none; }
+} 
+
+
+
+/*-------------[ BOUNCING MORE ICON ]--------------- */
+ 
+@-webkit-keyframes bounce {
+0%, 100% {
+-moz-transform: translateY(0);
+-ms-transform: translateY(0);
+-webkit-transform: translateY(0);
+transform: translateY(0);
+}
+40% {
+-moz-transform: translateY(-10px);
+-ms-transform: translateY(-10px);
+-webkit-transform: translateY(-10px);
+transform: translateY(-10px);
+}
+}
+@keyframes bounce {
+0%, 100% {
+-moz-transform: translateY(0);
+-ms-transform: translateY(0);
+-webkit-transform: translateY(0);
+transform: translateY(0);
+}
+40% {
+-moz-transform: translateY(-10px);
+-ms-transform: translateY(-10px);
+-webkit-transform: translateY(-10px);
+transform: translateY(-10px);
+}
+}
+span.scroll-down.et-pb-icon { 
+-webkit-animation-name: bounce;
+animation-name: bounce;
+-webkit-animation-duration: 1s;
+animation-duration: 1s;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both;
+-webkit-animation-iteration-count: infinite;
+animation-iteration-count: infinite;
+}
+}
+/*--------------[ END ]-----------------------*/
+

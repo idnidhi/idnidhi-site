@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="About - Nidhi Mehta Interior Design" description="Learn about Nidhi Mehta, our design philosophy, and our commitment to creating exceptional interior spaces.">
+	<Navigation />
+
+	<!-- Hero Section -->
+	<section class="pt-32 pb-16 px-4">
+		<div class="max-w-7xl mx-auto">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+				<div>
+					<h1 class="font-heading font-bold text-display-sm md:text-display leading-none tracking-tighter-xl mb-6">
+						About Us
+					</h1>
+					<p class="text-lg md:text-xl text-text-light leading-relaxed mb-6">
+						At Nidhi Mehta Interior Design, we believe that every space has a story waiting to be told. Our passion lies in transforming environments into meaningful experiences that reflect the unique essence of those who inhabit them.
+					</p>
+					<p class="text-lg text-text-light leading-relaxed">
+						With over a decade of experience in residential and commercial interior design, we bring a refined aesthetic sensibility combined with practical functionality to every project.
+					</p>
+				</div>
+				<div class="relative">
+					<!-- Placeholder for profile image -->
+					<div class="aspect-[3/4] bg-gradient-to-br from-gray-200 to-gray-300 rounded-sm overflow-hidden">
+						<div class="w-full h-full flex items-center justify-center">
+							<span class="text-gray-400 font-heading text-2xl">Nidhi Mehta</span>
+						</div>
+					</div>
+					<!-- Decorative element -->
+					<div class="absolute -bottom-6 -right-6 w-48 h-48 bg-accent/10 -z-10"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Design Philosophy -->
+	<section class="py-16 px-4 bg-background">
+		<div class="max-w-7xl mx-auto">
+			<div class="text-center mb-12">
+				<h2 class="font-heading text-3xl md:text-5xl font-bold text-text-dark mb-4">Our Philosophy</h2>
+				<p class="text-lg text-text-light max-w-3xl mx-auto">
+					We design with intention, crafting spaces that are timeless, elegant, and deeply personal.
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<!-- Philosophy 1 -->
+				<div class="text-center p-8">
+					<div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-primary/10">
+						<svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+						</svg>
+					</div>
+					<h3 class="font-heading text-xl font-semibold mb-3">Visionary Design</h3>
+					<p class="text-text-light leading-relaxed">
+						We see beyond the present, creating spaces that anticipate future needs while honoring timeless principles.
+					</p>
+				</div>
+
+				<!-- Philosophy 2 -->
+				<div class="text-center p-8">
+					<div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-primary/10">
+						<svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+						</svg>
+					</div>
+					<h3 class="font-heading text-xl font-semibold mb-3">Personal Touch</h3>
+					<p class="text-text-light leading-relaxed">
+						Every project is a collaboration, deeply rooted in understanding your lifestyle, aspirations, and unique story.
+					</p>
+				</div>
+
+				<!-- Philosophy 3 -->
+				<div class="text-center p-8">
+					<div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-full bg-primary/10">
+						<svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+						</svg>
+					</div>
+					<h3 class="font-heading text-xl font-semibold mb-3">Quality Assured</h3>
+					<p class="text-text-light leading-relaxed">
+						We partner with master craftsmen and premium suppliers to ensure impeccable execution and lasting quality.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Our Process -->
+	<section class="py-16 px-4">
+		<div class="max-w-7xl mx-auto">
+			<div class="text-center mb-12">
+				<h2 class="font-heading text-3xl md:text-5xl font-bold text-text-dark mb-4">Our Process</h2>
+				<p class="text-lg text-text-light max-w-3xl mx-auto">
+					A carefully crafted journey from initial concept to final reveal.
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+				<!-- Step 1 -->
+				<div class="relative">
+					<div class="text-center">
+						<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-accent text-text-dark font-heading text-2xl font-bold">
+							01
+						</div>
+						<h3 class="font-heading text-xl font-semibold mb-2">Discovery</h3>
+						<p class="text-text-light text-sm leading-relaxed">
+							Understanding your vision, lifestyle, and functional requirements.
+						</p>
+					</div>
+				</div>
+
+				<!-- Step 2 -->
+				<div class="relative">
+					<div class="text-center">
+						<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-accent text-text-dark font-heading text-2xl font-bold">
+							02
+						</div>
+						<h3 class="font-heading text-xl font-semibold mb-2">Concept</h3>
+						<p class="text-text-light text-sm leading-relaxed">
+							Developing mood boards, layouts, and design concepts tailored to you.
+						</p>
+					</div>
+				</div>
+
+				<!-- Step 3 -->
+				<div class="relative">
+					<div class="text-center">
+						<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-accent text-text-dark font-heading text-2xl font-bold">
+							03
+						</div>
+						<h3 class="font-heading text-xl font-semibold mb-2">Execution</h3>
+						<p class="text-text-light text-sm leading-relaxed">
+							Bringing the design to life with meticulous attention to detail.
+						</p>
+					</div>
+				</div>
+
+				<!-- Step 4 -->
+				<div class="relative">
+					<div class="text-center">
+						<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-accent text-text-dark font-heading text-2xl font-bold">
+							04
+						</div>
+						<h3 class="font-heading text-xl font-semibold mb-2">Reveal</h3>
+						<p class="text-text-light text-sm leading-relaxed">
+							Unveiling your transformed space, ready to be lived and loved.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-16 px-4 bg-text-dark text-white">
+		<div class="max-w-4xl mx-auto text-center">
+			<h2 class="font-heading text-3xl md:text-5xl font-bold mb-4">
+				Let's Start Your Project
+			</h2>
+			<p class="text-lg text-gray-300 mb-8 leading-relaxed">
+				Whether you're renovating a single room or designing an entire home, we're here to help bring your vision to life.
+			</p>
+			<a
+				href="/contact"
+				class="inline-block px-10 py-4 bg-accent text-text-dark font-medium uppercase tracking-wider text-sm hover:bg-accent/90 transition-all duration-300 hover:scale-105 cursor-pointer"
+			>
+				Contact Us
+			</a>
+		</div>
+	</section>
+
+	<Footer />
+</BaseLayout>
