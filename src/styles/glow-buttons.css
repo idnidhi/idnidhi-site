@@ -1,0 +1,93 @@
+/* Glow Button Effects - Silver Rose Gradient */
+
+/* Base glow button class */
+.btn-glow {
+	position: relative;
+	overflow: hidden;
+	isolation: isolate;
+}
+
+/* Gradient overlay with glow */
+.btn-glow::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	background: linear-gradient(
+		to right,
+		transparent 40%,
+		rgba(216, 191, 216, 0.08) 70%,
+		rgba(216, 191, 216, 0.2) 100%
+	);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+	z-index: 1;
+	pointer-events: none;
+}
+
+/* Animated glow stripe */
+.btn-glow::before {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 5px;
+	height: 60%;
+	background: linear-gradient(135deg, #F5E6E8, #D8BFD8, #C0A6B8);
+	border-radius: 2px 0 0 2px;
+	box-shadow: -2px 0 10px rgba(216, 191, 216, 0.8),
+	            -4px 0 20px rgba(216, 191, 216, 0.5);
+	z-index: 2;
+	transition: transform 300ms ease-out;
+	pointer-events: none;
+}
+
+/* Hover animation */
+.btn-glow:hover::before {
+	transform: translateY(-50%) translateX(calc(100% + 5px));
+	transition: transform 600ms ease-out;
+}
+
+/* Ensure button content is above overlays */
+.btn-glow > * {
+	position: relative;
+	z-index: 3;
+}
+
+/* Enhanced glow for primary gradient buttons */
+.btn-primary-glow {
+	background-image: linear-gradient(135deg, #F5E6E8, #D8BFD8, #C0A6B8);
+	box-shadow: 0 4px 15px rgba(216, 191, 216, 0.3),
+	            0 2px 8px rgba(216, 191, 216, 0.2);
+	transition: all 300ms ease-out;
+}
+
+.btn-primary-glow:hover {
+	box-shadow: 0 6px 25px rgba(216, 191, 216, 0.5),
+	            0 4px 15px rgba(216, 191, 216, 0.3),
+	            0 0 40px rgba(216, 191, 216, 0.2);
+	transform: translateY(-1px);
+}
+
+/* Subtle shimmer animation */
+@keyframes shimmer {
+	0% {
+		background-position: -200% center;
+	}
+	100% {
+		background-position: 200% center;
+	}
+}
+
+.btn-shimmer::after {
+	animation: shimmer 3s linear infinite;
+	background-size: 200% auto;
+}
+
+/* Performance optimizations */
+.btn-glow::before,
+.btn-glow::after {
+	will-change: transform, opacity;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
