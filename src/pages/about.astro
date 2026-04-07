@@ -8,12 +8,12 @@ import Footer from '../components/Footer.astro';
 	<Navigation />
 
 	<!-- Hero Section -->
-	<section class="pt-32 pb-16 px-4">
+	<section class="pt-32 pb-16 px-4 bg-black">
 		<div class="max-w-7xl mx-auto">
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 				<div>
-					<h1 class="font-heading font-bold text-display-sm md:text-display leading-none tracking-tighter-xl mb-6">
-						About Us
+					<h1 class="font-heading font-bold text-display-sm md:text-display leading-none tracking-tighter-xl mb-6 text-text">
+						About <span class="text-primary">Us</span>
 					</h1>
 					<p class="text-lg md:text-xl text-text-light leading-relaxed mb-6">
 						At Nidhi Mehta Interior Design, we believe that every space has a story waiting to be told. Our passion lies in transforming environments into meaningful experiences that reflect the unique essence of those who inhabit them.
@@ -24,23 +24,23 @@ import Footer from '../components/Footer.astro';
 				</div>
 				<div class="relative">
 					<!-- Placeholder for profile image -->
-					<div class="aspect-[3/4] bg-gradient-to-br from-gray-200 to-gray-300 rounded-sm overflow-hidden">
+					<div class="aspect-[3/4] bg-gradient-to-br from-border to-black-lighter rounded-sm overflow-hidden border border-border">
 						<div class="w-full h-full flex items-center justify-center">
-							<span class="text-gray-400 font-heading text-2xl">Nidhi Mehta</span>
+							<span class="text-text-muted font-heading text-2xl">Nidhi Mehta</span>
 						</div>
 					</div>
 					<!-- Decorative element -->
-					<div class="absolute -bottom-6 -right-6 w-48 h-48 bg-accent/10 -z-10"></div>
+					<div class="absolute -bottom-6 -right-6 w-48 h-48 bg-primary/10 -z-10"></div>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- Design Philosophy -->
-	<section class="py-16 px-4 bg-background">
+	<section class="py-16 px-4 bg-surface border-t border-border">
 		<div class="max-w-7xl mx-auto">
 			<div class="text-center mb-12">
-				<h2 class="font-heading text-3xl md:text-5xl font-bold text-text-dark mb-4">Our Philosophy</h2>
+				<h2 class="font-heading text-3xl md:text-5xl font-bold text-text mb-4">Our Philosophy</h2>
 				<p class="text-lg text-text-light max-w-3xl mx-auto">
 					We design with intention, crafting spaces that are timeless, elegant, and deeply personal.
 				</p>
@@ -55,7 +55,7 @@ import Footer from '../components/Footer.astro';
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
 						</svg>
 					</div>
-					<h3 class="font-heading text-xl font-semibold mb-3">Visionary Design</h3>
+					<h3 class="font-heading text-xl font-semibold mb-3 text-text">Visionary Design</h3>
 					<p class="text-text-light leading-relaxed">
 						We see beyond the present, creating spaces that anticipate future needs while honoring timeless principles.
 					</p>
@@ -68,7 +68,7 @@ import Footer from '../components/Footer.astro';
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
 						</svg>
 					</div>
-					<h3 class="font-heading text-xl font-semibold mb-3">Personal Touch</h3>
+					<h3 class="font-heading text-xl font-semibold mb-3 text-text">Personal Touch</h3>
 					<p class="text-text-light leading-relaxed">
 						Every project is a collaboration, deeply rooted in understanding your lifestyle, aspirations, and unique story.
 					</p>
@@ -81,7 +81,7 @@ import Footer from '../components/Footer.astro';
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
 						</svg>
 					</div>
-					<h3 class="font-heading text-xl font-semibold mb-3">Quality Assured</h3>
+					<h3 class="font-heading text-xl font-semibold mb-3 text-text">Quality Assured</h3>
 					<p class="text-text-light leading-relaxed">
 						We partner with master craftsmen and premium suppliers to ensure impeccable execution and lasting quality.
 					</p>
@@ -91,10 +91,10 @@ import Footer from '../components/Footer.astro';
 	</section>
 
 	<!-- Our Process -->
-	<section class="py-16 px-4">
+	<section class="py-16 px-4 bg-black border-t border-border">
 		<div class="max-w-7xl mx-auto">
 			<div class="text-center mb-12">
-				<h2 class="font-heading text-3xl md:text-5xl font-bold text-text-dark mb-4">Our Process</h2>
+				<h2 class="font-heading text-3xl md:text-5xl font-bold text-text mb-4">Our Process</h2>
 				<p class="text-lg text-text-light max-w-3xl mx-auto">
 					A carefully crafted journey from initial concept to final reveal.
 				</p>
@@ -104,10 +104,10 @@ import Footer from '../components/Footer.astro';
 				<!-- Step 1 -->
 				<div class="relative">
 					<div class="text-center">
-						<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-accent text-text-dark font-heading text-2xl font-bold">
+						<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-primary text-black font-heading text-2xl font-bold">
 							01
 						</div>
-						<h3 class="font-heading text-xl font-semibold mb-2">Discovery</h3>
+						<h3 class="font-heading text-xl font-semibold mb-2 text-text">Discovery</h3>
 						<p class="text-text-light text-sm leading-relaxed">
 							Understanding your vision, lifestyle, and functional requirements.
 						</p>
@@ -117,10 +117,10 @@ import Footer from '../components/Footer.astro';
 				<!-- Step 2 -->
 				<div class="relative">
 					<div class="text-center">
-						<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-accent text-text-dark font-heading text-2xl font-bold">
+						<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-primary text-black font-heading text-2xl font-bold">
 							02
 						</div>
-						<h3 class="font-heading text-xl font-semibold mb-2">Concept</h3>
+						<h3 class="font-heading text-xl font-semibold mb-2 text-text">Concept</h3>
 						<p class="text-text-light text-sm leading-relaxed">
 							Developing mood boards, layouts, and design concepts tailored to you.
 						</p>
@@ -130,10 +130,10 @@ import Footer from '../components/Footer.astro';
 				<!-- Step 3 -->
 				<div class="relative">
 					<div class="text-center">
-						<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-accent text-text-dark font-heading text-2xl font-bold">
+						<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-primary text-black font-heading text-2xl font-bold">
 							03
 						</div>
-						<h3 class="font-heading text-xl font-semibold mb-2">Execution</h3>
+						<h3 class="font-heading text-xl font-semibold mb-2 text-text">Execution</h3>
 						<p class="text-text-light text-sm leading-relaxed">
 							Bringing the design to life with meticulous attention to detail.
 						</p>
@@ -143,10 +143,10 @@ import Footer from '../components/Footer.astro';
 				<!-- Step 4 -->
 				<div class="relative">
 					<div class="text-center">
-						<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-accent text-text-dark font-heading text-2xl font-bold">
+						<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-primary text-black font-heading text-2xl font-bold">
 							04
 						</div>
-						<h3 class="font-heading text-xl font-semibold mb-2">Reveal</h3>
+						<h3 class="font-heading text-xl font-semibold mb-2 text-text">Reveal</h3>
 						<p class="text-text-light text-sm leading-relaxed">
 							Unveiling your transformed space, ready to be lived and loved.
 						</p>
@@ -157,17 +157,17 @@ import Footer from '../components/Footer.astro';
 	</section>
 
 	<!-- CTA Section -->
-	<section class="py-16 px-4 bg-text-dark text-white">
+	<section class="py-16 px-4 bg-surface border-t border-border text-white">
 		<div class="max-w-4xl mx-auto text-center">
 			<h2 class="font-heading text-3xl md:text-5xl font-bold mb-4">
 				Let's Start Your Project
 			</h2>
-			<p class="text-lg text-gray-300 mb-8 leading-relaxed">
+			<p class="text-lg text-text-light mb-8 leading-relaxed">
 				Whether you're renovating a single room or designing an entire home, we're here to help bring your vision to life.
 			</p>
 			<a
 				href="/contact"
-				class="inline-block px-10 py-4 bg-accent text-text-dark font-medium uppercase tracking-wider text-sm hover:bg-accent/90 transition-all duration-300 hover:scale-105 cursor-pointer"
+				class="inline-block px-10 py-4 bg-primary text-black font-medium uppercase tracking-wider text-sm hover:bg-secondary transition-all duration-300 hover:scale-105 cursor-pointer"
 			>
 				Contact Us
 			</a>

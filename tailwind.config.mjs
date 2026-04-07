@@ -4,16 +4,22 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				primary: '#2563EB',
-				secondary: '#3B82F6',
-				cta: '#F97316',
-				accent: '#D4AF37', // Gold accent for luxury feel
-				background: '#F8FAFC',
-				surface: '#FFFFFF',
+				primary: '#D4AF37', // Gold - primary accent
+				secondary: '#B8932F', // Darker gold
+				cta: '#D4AF37', // Gold for CTAs
+				accent: '#D4AF37', // Gold accent
+				black: {
+					DEFAULT: '#000000',
+					light: '#0A0A0A',
+					lighter: '#1A1A1A',
+				},
+				background: '#000000',
+				surface: '#0A0A0A',
+				border: '#1A1A1A',
 				text: {
-					DEFAULT: '#1E293B',
-					light: '#64748B',
-					dark: '#0F172A',
+					DEFAULT: '#FFFFFF',
+					light: '#A0A0A0',
+					muted: '#707070',
 				},
 			},
 			fontFamily: {

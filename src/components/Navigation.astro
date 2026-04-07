@@ -7,12 +7,13 @@ const navItems = [
 ];
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md border-b border-gray-200">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-border">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex justify-between items-center h-16 md:h-20">
 			<!-- Logo -->
-			<a href="/" class="font-heading text-xl md:text-2xl font-semibold text-text-dark tracking-tight hover:text-primary transition-colors duration-300">
-				Nidhi Mehta
+			<a href="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity duration-300">
+				<img src="/images/logo.png" alt="Nidhi Mehta Interior Design" class="h-10 md:h-12 w-auto" />
+				<span class="font-heading text-xl md:text-2xl font-semibold text-primary tracking-tight">Nidhi Mehta</span>
 			</a>
 
 			<!-- Desktop Navigation -->
@@ -43,7 +44,7 @@ const navItems = [
 	</div>
 
 	<!-- Mobile Navigation -->
-	<div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 bg-surface">
+	<div id="mobile-menu" class="hidden md:hidden border-t border-border bg-surface">
 		<ul class="px-4 py-4 space-y-3">
 			{navItems.map((item) => (
 				<li>
