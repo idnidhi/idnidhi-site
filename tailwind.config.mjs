@@ -4,10 +4,10 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				primary: '#B76E79', // Rose Gold - primary accent
-				secondary: '#A3596B', // Darker rose gold
-				cta: '#B76E79', // Rose Gold for CTAs
-				accent: '#E0BFB8', // Light rose gold
+				primary: '#D8BFD8', // Silver-rose mid tone
+				secondary: '#C0A6B8', // Darker silver-rose
+				cta: '#D8BFD8',
+				accent: '#F5E6E8', // Light silver-rose
 				black: {
 					DEFAULT: '#000000',
 					light: '#0A0A0A',
@@ -21,6 +21,10 @@ export default {
 					light: '#A0A0A0',
 					muted: '#707070',
 				},
+			},
+			backgroundImage: {
+				'gradient-primary': 'linear-gradient(135deg, #F5E6E8, #D8BFD8, #C0A6B8)',
+				'gradient-primary-hover': 'linear-gradient(135deg, #C0A6B8, #D8BFD8, #F5E6E8)',
 			},
 			fontFamily: {
 				heading: ['Inter', 'system-ui', 'sans-serif'],
