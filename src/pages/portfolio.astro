@@ -3,17 +3,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 
-// Sample portfolio data - replace with actual data
+// Portfolio projects with real images
 const projects = [
-	{ id: 1, title: 'Modern Residence', category: 'residential', image: '', description: 'A contemporary home blending minimalist aesthetics with warm comfort.' },
-	{ id: 2, title: 'Luxury Villa', category: 'residential', image: '', description: 'Opulent interiors that redefine luxury living.' },
-	{ id: 3, title: 'Boutique Hotel', category: 'commercial', image: '', description: 'A unique hospitality experience through thoughtful design.' },
-	{ id: 4, title: 'Corporate Office', category: 'commercial', image: '', description: 'Productive workspace with inspiring design elements.' },
-	{ id: 5, title: 'Beach House', category: 'residential', image: '', description: 'Coastal living at its finest with natural materials.' },
-	{ id: 6, title: 'Restaurant Design', category: 'hospitality', image: '', description: 'Ambient dining space that enhances the culinary experience.' },
-	{ id: 7, title: 'Penthouse Suite', category: 'residential', image: '', description: 'Sky-high luxury with panoramic views.' },
-	{ id: 8, title: 'Spa & Wellness', category: 'hospitality', image: '', description: 'Serene sanctuary for relaxation and rejuvenation.' },
-	{ id: 9, title: 'Showroom Design', category: 'commercial', image: '', description: 'Brand identity brought to life through spatial design.' },
+	{ id: 1, title: 'Modern Living Space', category: 'residential', image: '/images/portfolio/project-1.jpg', description: 'A contemporary home blending minimalist aesthetics with warm comfort.' },
+	{ id: 2, title: 'Elegant Residential', category: 'residential', image: '/images/portfolio/project-2.jpg', description: 'Sophisticated interiors that redefine modern living.' },
+	{ id: 3, title: 'Luxury Interior', category: 'residential', image: '/images/portfolio/project-3.jpg', description: 'Opulent design with attention to every detail.' },
+	{ id: 4, title: 'Family Room Design', category: 'residential', image: '/images/portfolio/project-4.jpg', description: 'Warm and inviting space for family gatherings.' },
+	{ id: 5, title: 'Powder Room', category: 'residential', image: '/images/portfolio/project-5.jpg', description: 'Compact luxury with elegant finishes.' },
+	{ id: 6, title: 'Study Room', category: 'residential', image: '/images/portfolio/project-6.jpg', description: 'Productive workspace with inspiring design elements.' },
+	{ id: 7, title: 'Contemporary Seating', category: 'commercial', image: '/images/portfolio/project-7.jpg', description: 'Modern furniture design for commercial spaces.' },
+	{ id: 8, title: 'Designer Furniture', category: 'commercial', image: '/images/portfolio/project-8.jpg', description: 'Curated selection of statement pieces.' },
+	{ id: 9, title: 'Interior Styling', category: 'hospitality', image: '/images/portfolio/project-9.jpg', description: 'Brand identity brought to life through spatial design.' },
 ];
 ---
 
@@ -74,10 +74,13 @@ const projects = [
 						data-category={project.category}
 						style="aspect-ratio: 4/5"
 					>
-						<!-- Placeholder for image -->
-						<div class="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-							<span class="text-gray-400 font-heading text-xl">{project.title}</span>
-						</div>
+						<!-- Project Image -->
+						<img
+							src={project.image}
+							alt={project.title}
+							class="absolute inset-0 w-full h-full object-cover"
+							loading="lazy"
+						/>
 
 						<!-- Hover Overlay -->
 						<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
