@@ -35,8 +35,8 @@ import Spotlight from '../components/Spotlight.astro';
 
 			<!-- Entry Point Package - Featured with Gradient -->
 			<div class="mb-10">
-				<div class="bg-gradient-primary text-black border-2 border-primary p-6 md:p-8 relative rounded-lg shadow-lg">
-					<div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-white border-2 border-primary text-black text-xs font-bold uppercase tracking-wider rounded-full">
+				<div class="bg-gradient-primary text-black border-2 border-primary p-6 md:p-8 relative  shadow-lg">
+					<div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-white border-2 border-primary text-black text-xs font-bold uppercase tracking-wider ">
 						Start Here
 					</div>
 					<div class="grid md:grid-cols-2 gap-6 items-center">
@@ -77,7 +77,7 @@ import Spotlight from '../components/Spotlight.astro';
 									General feasibility discussion
 								</li>
 							</ul>
-							<a href="#booking" class="inline-block mt-4 px-6 py-3 bg-black text-white font-medium uppercase tracking-wider text-sm hover:bg-gray-900 transition-all duration-300 cursor-pointer rounded shadow-md">
+							<a href="#booking" class="inline-block mt-4 px-6 py-3 bg-black text-white font-medium uppercase tracking-wider text-sm hover:bg-gray-900 transition-all duration-300 cursor-pointer shadow-md">
 								Book Site Visit
 							</a>
 						</div>
@@ -96,29 +96,29 @@ import Spotlight from '../components/Spotlight.astro';
 						<div class="md:hidden flex gap-3 overflow-x-auto pb-3 scrollbar-hide mb-6">
 							<button
 								data-package="estimate"
-								class="package-tab flex-shrink-0 px-5 py-3 bg-surface border-2 border-border text-text font-heading font-semibold text-sm rounded-lg hover:border-primary transition-all duration-300 whitespace-nowrap active"
+								class="package-tab flex-shrink-0 px-5 py-3 bg-surface border-2 border-border text-text font-heading font-semibold text-sm  hover:border-primary transition-all duration-300 whitespace-nowrap active"
 							>
 								<div class="text-primary text-xs font-mono mb-0.5">₹2,999</div>
 								<div class="text-sm">Estimate</div>
 							</button>
 							<button
 								data-package="plans"
-								class="package-tab flex-shrink-0 px-5 py-3 bg-surface border-2 border-border text-text font-heading font-semibold text-sm rounded-lg hover:border-primary transition-all duration-300 whitespace-nowrap"
+								class="package-tab flex-shrink-0 px-5 py-3 bg-surface border-2 border-border text-text font-heading font-semibold text-sm  hover:border-primary transition-all duration-300 whitespace-nowrap"
 							>
 								<div class="text-primary text-xs font-mono mb-0.5">₹15K+</div>
 								<div class="text-sm">Plans</div>
 							</button>
 							<button
 								data-package="partnership"
-								class="package-tab flex-shrink-0 px-5 py-3 bg-gradient-primary text-black border-2 border-primary font-heading font-semibold text-sm rounded-lg hover:shadow-xl transition-all duration-300 whitespace-nowrap relative"
+								class="package-tab flex-shrink-0 px-5 py-3 bg-gradient-primary text-black border-2 border-primary font-heading font-semibold text-sm  hover:shadow-xl transition-all duration-300 whitespace-nowrap relative"
 							>
-								<div class="absolute -top-1.5 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-white border border-primary text-[9px] font-bold uppercase tracking-wider rounded-full">Popular</div>
+								<div class="absolute -top-1.5 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-white border border-primary text-[9px] font-bold uppercase tracking-wider ">Popular</div>
 								<div class="text-xs font-mono mb-0.5 opacity-80 pt-2">6-10%</div>
 								<div class="text-sm">Partnership</div>
 							</button>
 							<button
 								data-package="turnkey"
-								class="package-tab flex-shrink-0 px-5 py-3 bg-surface border-2 border-border text-text font-heading font-semibold text-sm rounded-lg hover:border-primary transition-all duration-300 whitespace-nowrap"
+								class="package-tab flex-shrink-0 px-5 py-3 bg-surface border-2 border-border text-text font-heading font-semibold text-sm  hover:border-primary transition-all duration-300 whitespace-nowrap"
 							>
 								<div class="text-primary text-xs font-mono mb-0.5">10-15%</div>
 								<div class="text-sm">Turnkey</div>
@@ -129,7 +129,7 @@ import Spotlight from '../components/Spotlight.astro';
 						<div class="hidden md:flex flex-col gap-3">
 							<button
 								data-package="estimate"
-								class="package-tab text-left px-6 py-5 bg-surface border-2 border-border text-text font-heading rounded-lg hover:border-primary hover:shadow-lg transition-all duration-300 active"
+								class="package-tab text-left px-6 py-5 bg-surface border-2 border-border text-text font-heading  hover:border-primary hover:shadow-lg transition-all duration-300 active"
 							>
 								<div class="text-primary text-sm font-mono mb-1">₹2,999</div>
 								<div class="font-semibold text-lg">Estimate Package</div>
@@ -137,7 +137,7 @@ import Spotlight from '../components/Spotlight.astro';
 							</button>
 							<button
 								data-package="plans"
-								class="package-tab text-left px-6 py-5 bg-surface border-2 border-border text-text font-heading rounded-lg hover:border-primary hover:shadow-lg transition-all duration-300"
+								class="package-tab text-left px-6 py-5 bg-surface border-2 border-border text-text font-heading  hover:border-primary hover:shadow-lg transition-all duration-300"
 							>
 								<div class="text-primary text-sm font-mono mb-1">₹15,000+</div>
 								<div class="font-semibold text-lg">Design Plans</div>
@@ -145,16 +145,16 @@ import Spotlight from '../components/Spotlight.astro';
 							</button>
 							<button
 								data-package="partnership"
-								class="package-tab text-left px-6 py-5 bg-gradient-primary text-black border-2 border-primary font-heading rounded-lg hover:shadow-xl transition-all duration-300 relative"
+								class="package-tab text-left px-6 py-5 bg-gradient-primary text-black border-2 border-primary font-heading  hover:shadow-xl transition-all duration-300 relative"
 							>
-								<div class="absolute -top-2 left-4 px-3 py-0.5 bg-white border border-primary text-[10px] font-bold uppercase tracking-wider rounded-full">Most Popular</div>
+								<div class="absolute -top-2 left-4 px-3 py-0.5 bg-white border border-primary text-[10px] font-bold uppercase tracking-wider ">Most Popular</div>
 								<div class="text-sm font-mono mb-1 opacity-80 pt-3">6-10%</div>
 								<div class="font-semibold text-lg">Partnership</div>
 								<div class="text-xs opacity-80 mt-1">We guide, you save</div>
 							</button>
 							<button
 								data-package="turnkey"
-								class="package-tab text-left px-6 py-5 bg-surface border-2 border-border text-text font-heading rounded-lg hover:border-primary hover:shadow-lg transition-all duration-300"
+								class="package-tab text-left px-6 py-5 bg-surface border-2 border-border text-text font-heading  hover:border-primary hover:shadow-lg transition-all duration-300"
 							>
 								<div class="text-primary text-sm font-mono mb-1">10-15%</div>
 								<div class="font-semibold text-lg">Turnkey</div>
@@ -167,14 +167,14 @@ import Spotlight from '../components/Spotlight.astro';
 					<div class="relative min-h-[400px] md:min-h-[520px]">
 					<!-- Estimate Package Content -->
 					<div data-package-content="estimate" class="package-content active absolute inset-0 opacity-100 transition-all duration-500">
-						<div class="bg-white border-2 border-primary p-5 md:p-8 rounded-lg shadow-xl">
+						<div class="bg-white border-2 border-primary p-5 md:p-8  shadow-xl">
 							<div class="mb-5 md:mb-6">
 								<h3 class="font-heading text-xl md:text-3xl font-bold text-black mb-2 md:mb-3">Design + Estimate Document</h3>
 								<div class="flex flex-wrap items-baseline gap-2 mb-3">
 									<span class="text-4xl md:text-6xl font-bold text-black">₹2,999</span>
 									<span class="text-sm md:text-lg text-gray-600">Credited back to any package</span>
 								</div>
-								<p class="text-sm md:text-base text-black mt-3 md:mt-4 bg-gray-50 p-2.5 md:p-3 rounded border-l-4 border-primary">
+								<p class="text-sm md:text-base text-black mt-3 md:mt-4 bg-gray-50 p-2.5 md:p-3 border-l-4 border-primary">
 									<strong>Perfect for:</strong> DIY execution with professional guidance
 								</p>
 							</div>
@@ -212,7 +212,7 @@ import Spotlight from '../components/Spotlight.astro';
 								</li>
 							</ul>
 
-							<a href="#booking" class="btn-glow inline-block px-6 md:px-8 py-3 md:py-4 border-2 border-primary text-primary font-medium uppercase tracking-wider text-xs md:text-sm hover:bg-primary hover:text-black hover:scale-105 transition-all duration-300 cursor-pointer rounded">
+							<a href="#booking" class="btn-glow inline-block px-6 md:px-8 py-3 md:py-4 border-2 border-primary text-primary font-medium uppercase tracking-wider text-xs md:text-sm hover:bg-primary hover:text-black hover:scale-105 transition-all duration-300 cursor-pointer">
 								Book This Package
 							</a>
 						</div>
@@ -220,14 +220,14 @@ import Spotlight from '../components/Spotlight.astro';
 
 					<!-- Design Plans Content -->
 					<div data-package-content="plans" class="package-content absolute inset-0 opacity-0 pointer-events-none transition-all duration-500">
-						<div class="bg-white border-2 border-gray-200 p-5 md:p-8 rounded-lg shadow-xl">
+						<div class="bg-white border-2 border-gray-200 p-5 md:p-8  shadow-xl">
 							<div class="mb-5 md:mb-6">
 								<h3 class="font-heading text-xl md:text-3xl font-bold text-black mb-2 md:mb-3">Complete Design Plans</h3>
 								<div class="flex flex-wrap items-baseline gap-2 mb-3">
 									<span class="text-4xl md:text-6xl font-bold text-black">₹15K+</span>
 									<span class="text-sm md:text-lg text-gray-600">Per room, varies by size</span>
 								</div>
-								<p class="text-sm md:text-base text-black mt-3 md:mt-4 bg-gray-50 p-2.5 md:p-3 rounded border-l-4 border-primary">
+								<p class="text-sm md:text-base text-black mt-3 md:mt-4 bg-gray-50 p-2.5 md:p-3 border-l-4 border-primary">
 									<strong>Perfect for:</strong> You manage contractors, we give complete plans
 								</p>
 							</div>
@@ -259,7 +259,7 @@ import Spotlight from '../components/Spotlight.astro';
 								</li>
 							</ul>
 
-							<a href="#booking" class="btn-glow inline-block px-6 md:px-8 py-3 md:py-4 border-2 border-primary text-primary font-medium uppercase tracking-wider text-xs md:text-sm hover:bg-primary hover:text-black hover:scale-105 transition-all duration-300 cursor-pointer rounded">
+							<a href="#booking" class="btn-glow inline-block px-6 md:px-8 py-3 md:py-4 border-2 border-primary text-primary font-medium uppercase tracking-wider text-xs md:text-sm hover:bg-primary hover:text-black hover:scale-105 transition-all duration-300 cursor-pointer">
 								Book This Package
 							</a>
 						</div>
@@ -267,8 +267,8 @@ import Spotlight from '../components/Spotlight.astro';
 
 					<!-- Partnership Content -->
 					<div data-package-content="partnership" class="package-content absolute inset-0 opacity-0 pointer-events-none transition-all duration-500">
-						<div class="bg-gradient-primary text-black border-2 border-primary p-5 md:p-8 rounded-lg shadow-xl relative">
-							<div class="absolute -top-2.5 md:-top-3 left-4 md:left-8 px-3 md:px-4 py-0.5 md:py-1 bg-white border-2 border-primary text-black text-[10px] md:text-xs font-bold uppercase tracking-wider rounded-full">
+						<div class="bg-gradient-primary text-black border-2 border-primary p-5 md:p-8  shadow-xl relative">
+							<div class="absolute -top-2.5 md:-top-3 left-4 md:left-8 px-3 md:px-4 py-0.5 md:py-1 bg-white border-2 border-primary text-black text-[10px] md:text-xs font-bold uppercase tracking-wider ">
 								Most Popular
 							</div>
 							<div class="mb-5 md:mb-6 pt-4 md:pt-2">
@@ -277,7 +277,7 @@ import Spotlight from '../components/Spotlight.astro';
 									<span class="text-4xl md:text-6xl font-bold">6-10%</span>
 									<span class="text-sm md:text-lg opacity-80">Of total project cost</span>
 								</div>
-								<p class="text-sm md:text-base mt-3 md:mt-4 bg-white/20 p-2.5 md:p-3 rounded border-l-4 border-black">
+								<p class="text-sm md:text-base mt-3 md:mt-4 bg-white/20 p-2.5 md:p-3 border-l-4 border-black">
 									<strong>Perfect for:</strong> Save money but need expert help
 								</p>
 							</div>
@@ -315,7 +315,7 @@ import Spotlight from '../components/Spotlight.astro';
 								</li>
 							</ul>
 
-							<a href="#booking" class="btn-glow btn-primary-glow inline-block px-6 md:px-8 py-3 md:py-4 bg-black text-white font-medium uppercase tracking-wider text-xs md:text-sm hover:bg-gray-900 hover:scale-105 transition-all duration-300 cursor-pointer rounded shadow-md">
+							<a href="#booking" class="btn-glow btn-primary-glow inline-block px-6 md:px-8 py-3 md:py-4 bg-black text-white font-medium uppercase tracking-wider text-xs md:text-sm hover:bg-gray-900 hover:scale-105 transition-all duration-300 cursor-pointer shadow-md">
 								Choose Partnership
 							</a>
 						</div>
@@ -323,14 +323,14 @@ import Spotlight from '../components/Spotlight.astro';
 
 					<!-- Turnkey Content -->
 					<div data-package-content="turnkey" class="package-content absolute inset-0 opacity-0 pointer-events-none transition-all duration-500">
-						<div class="bg-white border-2 border-gray-200 p-5 md:p-8 rounded-lg shadow-xl">
+						<div class="bg-white border-2 border-gray-200 p-5 md:p-8  shadow-xl">
 							<div class="mb-5 md:mb-6">
 								<h3 class="font-heading text-xl md:text-3xl font-bold text-black mb-2 md:mb-3">Full Service - We Do Everything</h3>
 								<div class="flex flex-wrap items-baseline gap-2 mb-3">
 									<span class="text-4xl md:text-6xl font-bold text-black">10-15%</span>
 									<span class="text-sm md:text-lg text-gray-600">Of total project cost</span>
 								</div>
-								<p class="text-sm md:text-base text-black mt-3 md:mt-4 bg-gray-50 p-2.5 md:p-3 rounded border-l-4 border-primary">
+								<p class="text-sm md:text-base text-black mt-3 md:mt-4 bg-gray-50 p-2.5 md:p-3 border-l-4 border-primary">
 									<strong>Perfect for:</strong> Busy people with no time to manage
 								</p>
 							</div>
@@ -368,7 +368,7 @@ import Spotlight from '../components/Spotlight.astro';
 								</li>
 							</ul>
 
-							<a href="#booking" class="btn-glow inline-block px-6 md:px-8 py-3 md:py-4 border-2 border-primary text-primary font-medium uppercase tracking-wider text-xs md:text-sm hover:bg-primary hover:text-black hover:scale-105 transition-all duration-300 cursor-pointer rounded">
+							<a href="#booking" class="btn-glow inline-block px-6 md:px-8 py-3 md:py-4 border-2 border-primary text-primary font-medium uppercase tracking-wider text-xs md:text-sm hover:bg-primary hover:text-black hover:scale-105 transition-all duration-300 cursor-pointer">
 								Book This Package
 							</a>
 						</div>
@@ -529,7 +529,7 @@ import Spotlight from '../components/Spotlight.astro';
 
 					<div class="space-y-3">
 						<!-- FAQ 1 -->
-						<details class="bg-surface border border-border p-4 cursor-pointer group rounded-lg hover:border-primary transition-colors">
+						<details class="bg-surface border border-border p-4 cursor-pointer group  hover:border-primary transition-colors">
 							<summary class="font-heading text-base md:text-lg font-semibold text-text list-none flex justify-between items-center">
 								Do you visit for free to see my home?
 								<svg class="w-5 h-5 text-primary transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -547,7 +547,7 @@ import Spotlight from '../components/Spotlight.astro';
 						</details>
 
 						<!-- FAQ 2 -->
-						<details class="bg-surface border border-border p-4 cursor-pointer group rounded-lg hover:border-primary transition-colors">
+						<details class="bg-surface border border-border p-4 cursor-pointer group  hover:border-primary transition-colors">
 							<summary class="font-heading text-base md:text-lg font-semibold text-text list-none flex justify-between items-center">
 								Why don't you have an office?
 								<svg class="w-5 h-5 text-primary transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -562,7 +562,7 @@ import Spotlight from '../components/Spotlight.astro';
 						</details>
 
 						<!-- FAQ 3 -->
-						<details class="bg-surface border border-border p-4 cursor-pointer group rounded-lg hover:border-primary transition-colors">
+						<details class="bg-surface border border-border p-4 cursor-pointer group  hover:border-primary transition-colors">
 							<summary class="font-heading text-base md:text-lg font-semibold text-text list-none flex justify-between items-center">
 								Can I upgrade my package later?
 								<svg class="w-5 h-5 text-primary transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -577,7 +577,7 @@ import Spotlight from '../components/Spotlight.astro';
 						</details>
 
 						<!-- FAQ 4 -->
-						<details class="bg-surface border border-border p-4 cursor-pointer group rounded-lg hover:border-primary transition-colors">
+						<details class="bg-surface border border-border p-4 cursor-pointer group  hover:border-primary transition-colors">
 							<summary class="font-heading text-base md:text-lg font-semibold text-text list-none flex justify-between items-center">
 								What does 6-10% mean exactly?
 								<svg class="w-5 h-5 text-primary transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -595,7 +595,7 @@ import Spotlight from '../components/Spotlight.astro';
 						</details>
 
 						<!-- FAQ 5 -->
-						<details class="bg-surface border border-border p-4 cursor-pointer group rounded-lg hover:border-primary transition-colors">
+						<details class="bg-surface border border-border p-4 cursor-pointer group  hover:border-primary transition-colors">
 							<summary class="font-heading text-base md:text-lg font-semibold text-text list-none flex justify-between items-center">
 								What's NOT included in your packages?
 								<svg class="w-5 h-5 text-primary transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -610,7 +610,7 @@ import Spotlight from '../components/Spotlight.astro';
 						</details>
 
 						<!-- FAQ 6 -->
-						<details class="bg-surface border border-border p-4 cursor-pointer group rounded-lg hover:border-primary transition-colors">
+						<details class="bg-surface border border-border p-4 cursor-pointer group  hover:border-primary transition-colors">
 							<summary class="font-heading text-base md:text-lg font-semibold text-text list-none flex justify-between items-center">
 								Can I pay in installments?
 								<svg class="w-5 h-5 text-primary transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -625,7 +625,7 @@ import Spotlight from '../components/Spotlight.astro';
 						</details>
 
 						<!-- FAQ 7 -->
-						<details class="bg-surface border border-border p-4 cursor-pointer group rounded-lg hover:border-primary transition-colors">
+						<details class="bg-surface border border-border p-4 cursor-pointer group  hover:border-primary transition-colors">
 							<summary class="font-heading text-base md:text-lg font-semibold text-text list-none flex justify-between items-center">
 								How do I get started?
 								<svg class="w-5 h-5 text-primary transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -656,7 +656,7 @@ import Spotlight from '../components/Spotlight.astro';
 					</div>
 
 					<!-- Zoho Booking Embed -->
-					<div class="bg-surface border-2 border-border p-6 rounded-lg">
+					<div class="bg-surface border-2 border-border p-6 ">
 						<div class="text-text-light mb-6 text-sm">
 							<p class="mb-2">
 								Choose your preferred date and time below.
@@ -667,7 +667,7 @@ import Spotlight from '../components/Spotlight.astro';
 						</div>
 
 						<!-- Placeholder for Zoho Booking integration -->
-						<div class="zoho-booking-container bg-black border-2 border-dashed border-border p-8 text-center rounded-lg">
+						<div class="zoho-booking-container bg-black border-2 border-dashed border-border p-8 text-center ">
 							<svg class="w-12 h-12 text-primary mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 							</svg>
@@ -683,7 +683,7 @@ import Spotlight from '../components/Spotlight.astro';
 						<p class="text-text-light mb-3 text-sm text-center">
 							Or reach out directly:
 						</p>
-						<a href="mailto:hello@idnidhi.com" class="flex items-center justify-center px-6 py-3 bg-gradient-primary text-black font-medium uppercase tracking-wider text-sm hover:opacity-90 transition-all duration-300 cursor-pointer rounded shadow-lg">
+						<a href="mailto:hello@idnidhi.com" class="flex items-center justify-center px-6 py-3 bg-gradient-primary text-black font-medium uppercase tracking-wider text-sm hover:opacity-90 transition-all duration-300 cursor-pointer shadow-lg">
 							<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
 							</svg>
