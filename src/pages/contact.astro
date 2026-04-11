@@ -390,7 +390,7 @@ import Spotlight from '../components/Spotlight.astro';
 
 			// Function to switch to a specific package
 			function switchToPackage(packageName) {
-				// Remove active from all tabs
+				// Remove active from all tabs (both mobile and desktop)
 				tabs.forEach(t => {
 					t.classList.remove('active');
 					// Reset non-partnership tabs to default styles
@@ -400,15 +400,15 @@ import Spotlight from '../components/Spotlight.astro';
 					}
 				});
 
-				// Find and activate the target tab
-				const targetTab = document.querySelector(`[data-package="${packageName}"]`);
-				if (targetTab) {
+				// Find and activate ALL matching tabs (mobile + desktop)
+				const targetTabs = document.querySelectorAll(`[data-package="${packageName}"]`);
+				targetTabs.forEach(targetTab => {
 					targetTab.classList.add('active');
 					if (packageName !== 'partnership') {
 						targetTab.classList.add('border-primary', 'shadow-lg');
 						targetTab.classList.remove('border-border');
 					}
-				}
+				});
 
 				// Hide all contents
 				contents.forEach(content => {
