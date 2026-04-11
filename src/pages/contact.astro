@@ -378,50 +378,107 @@ import Spotlight from '../components/Spotlight.astro';
 		</div>
 	</section>
 
-	<!-- Package Selector Script -->
+	<!-- Package Selector Script with Auto-Shuffle -->
 	<script>
 		document.addEventListener('DOMContentLoaded', () => {
 			const tabs = document.querySelectorAll('.package-tab');
 			const contents = document.querySelectorAll('.package-content');
+			const packages = ['estimate', 'plans', 'partnership', 'turnkey'];
+			let currentIndex = 0;
+			let autoplayInterval = null;
+			let isPaused = false;
 
-			tabs.forEach(tab => {
-				tab.addEventListener('click', () => {
-					const packageName = tab.dataset.package;
-
-					// Remove active from all tabs
-					tabs.forEach(t => {
-						t.classList.remove('active');
-						// Reset non-partnership tabs to default styles
-						if (t.dataset.package !== 'partnership') {
-							t.classList.remove('border-primary', 'shadow-lg');
-							t.classList.add('border-border');
-						}
-					});
-
-					// Add active to clicked tab
-					tab.classList.add('active');
-					if (tab.dataset.package !== 'partnership') {
-						tab.classList.add('border-primary', 'shadow-lg');
-						tab.classList.remove('border-border');
-					}
-
-					// Hide all contents
-					contents.forEach(content => {
-						content.classList.remove('active');
-						content.classList.add('opacity-0', 'pointer-events-none');
-						content.classList.remove('opacity-100');
-					});
-
-					// Show selected content
-					const selectedContent = document.querySelector(`[data-package-content="${packageName}"]`);
-					if (selectedContent) {
-						setTimeout(() => {
-							selectedContent.classList.add('active', 'opacity-100');
-							selectedContent.classList.remove('opacity-0', 'pointer-events-none');
-						}, 50);
+			// Function to switch to a specific package
+			function switchToPackage(packageName) {
+				// Remove active from all tabs
+				tabs.forEach(t => {
+					t.classList.remove('active');
+					// Reset non-partnership tabs to default styles
+					if (t.dataset.package !== 'partnership') {
+						t.classList.remove('border-primary', 'shadow-lg');
+						t.classList.add('border-border');
 					}
 				});
+
+				// Find and activate the target tab
+				const targetTab = document.querySelector(`[data-package="${packageName}"]`);
+				if (targetTab) {
+					targetTab.classList.add('active');
+					if (packageName !== 'partnership') {
+						targetTab.classList.add('border-primary', 'shadow-lg');
+						targetTab.classList.remove('border-border');
+					}
+				}
+
+				// Hide all contents
+				contents.forEach(content => {
+					content.classList.remove('active');
+					content.classList.add('opacity-0', 'pointer-events-none');
+					content.classList.remove('opacity-100');
+				});
+
+				// Show selected content
+				const selectedContent = document.querySelector(`[data-package-content="${packageName}"]`);
+				if (selectedContent) {
+					setTimeout(() => {
+						selectedContent.classList.add('active', 'opacity-100');
+						selectedContent.classList.remove('opacity-0', 'pointer-events-none');
+					}, 50);
+				}
+
+				// Update current index
+				currentIndex = packages.indexOf(packageName);
+			}
+
+			// Auto-advance to next package
+			function nextPackage() {
+				currentIndex = (currentIndex + 1) % packages.length;
+				switchToPackage(packages[currentIndex]);
+			}
+
+			// Start auto-shuffle
+			function startAutoplay() {
+				if (!autoplayInterval) {
+					autoplayInterval = setInterval(() => {
+						if (!isPaused) {
+							nextPackage();
+						}
+					}, 5000); // Change every 5 seconds
+				}
+			}
+
+			// Stop auto-shuffle
+			function stopAutoplay() {
+				if (autoplayInterval) {
+					clearInterval(autoplayInterval);
+					autoplayInterval = null;
+				}
+			}
+
+			// Manual click handling
+			tabs.forEach(tab => {
+				tab.addEventListener('click', () => {
+					stopAutoplay();
+					switchToPackage(tab.dataset.package);
+					// Restart autoplay after manual interaction
+					setTimeout(() => startAutoplay(), 1000);
+				});
 			});
+
+			// Pause on hover (for both desktop sidebar and content area)
+			const packageSelector = document.querySelector('.grid.md\\:grid-cols-\\[320px_1fr\\]');
+			if (packageSelector) {
+				packageSelector.addEventListener('mouseenter', () => {
+					isPaused = true;
+				});
+
+				packageSelector.addEventListener('mouseleave', () => {
+					isPaused = false;
+				});
+			}
+
+			// Start auto-shuffle on page load
+			startAutoplay();
 		});
 	</script>
 
