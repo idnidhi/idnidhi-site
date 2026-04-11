@@ -1,0 +1,637 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import Spotlight from '../components/Spotlight.astro';
+---
+
+<BaseLayout title="Contact - Nidhi Mehta Interior Design" description="Start your interior design journey with transparent pricing and professional consultation. Virtual-first boutique design studio serving Vadodara.">
+	<Navigation />
+
+	<!-- Hero Section -->
+	<section class="pt-32 pb-16 px-4 bg-black relative overflow-hidden">
+		<Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="#D8BFD8" />
+		<div class="max-w-4xl mx-auto text-center relative z-10">
+			<h1 class="font-heading font-bold text-display-sm md:text-display leading-none tracking-tighter-xl mb-6 text-text">
+				Let's Create Your <span class="bg-gradient-primary bg-clip-text text-transparent">Dream Space</span>
+			</h1>
+			<p class="text-lg md:text-xl text-text-light leading-relaxed max-w-3xl mx-auto">
+				We're a virtual-first boutique design studio in Vadodara, which means we come to you.
+				Our flexible approach ensures you get professional design services without the overhead costs
+				of traditional firms with expensive office spaces.
+			</p>
+		</div>
+	</section>
+
+	<!-- Pricing Section -->
+	<section class="py-section px-4 bg-surface border-t border-border">
+		<div class="max-w-7xl mx-auto">
+			<div class="text-center mb-16">
+				<h2 class="font-heading text-4xl md:text-6xl font-bold text-text mb-4">
+					Transparent Pricing
+				</h2>
+				<p class="text-lg text-text-light max-w-2xl mx-auto">
+					Choose the level of involvement that fits your budget and timeline.
+					All packages designed to deliver exceptional spaces without hidden costs.
+				</p>
+			</div>
+
+			<!-- Entry Point Package - Featured -->
+			<div class="max-w-2xl mx-auto mb-8">
+				<div class="bg-gradient-primary text-black border-2 border-primary p-8 text-center relative">
+					<div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-black text-primary text-xs font-bold uppercase tracking-wider">
+						Perfect Starting Point
+					</div>
+					<h3 class="font-heading text-3xl font-bold mb-3">Quick Discovery Call</h3>
+					<div class="flex items-baseline justify-center mb-4">
+						<span class="text-5xl font-bold">₹499</span>
+						<span class="ml-2 opacity-80">15 minutes</span>
+					</div>
+					<p class="mb-6 opacity-90 max-w-lg mx-auto">
+						Not sure where to start? Let's chat! A quick phone or video call to discuss your project scope,
+						timeline, budget, and answer your initial questions. Low commitment, high value.
+					</p>
+					<ul class="space-y-2 text-sm mb-6 text-left max-w-md mx-auto">
+						<li class="flex items-start">
+							<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+							</svg>
+							Understanding your project vision and scope
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+							</svg>
+							Budget and timeline feasibility check
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+							</svg>
+							Package recommendations for your needs
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+							</svg>
+							Next steps and process overview
+						</li>
+					</ul>
+					<a href="#booking" class="inline-block px-8 py-4 bg-black text-primary font-medium uppercase tracking-wider text-sm hover:bg-surface transition-all duration-300 cursor-pointer">
+						Book Discovery Call
+					</a>
+				</div>
+			</div>
+
+			<!-- Main Pricing Cards -->
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-16">
+				<!-- Package 1: Consultation -->
+				<div class="bg-black border-2 border-border hover:border-primary transition-all duration-300 p-8 flex flex-col">
+					<div class="mb-6">
+						<h3 class="font-heading text-2xl font-bold text-text mb-2">Design Consultation</h3>
+						<div class="flex items-baseline mb-4">
+							<span class="text-4xl font-bold text-primary">₹2,999</span>
+							<span class="text-text-light ml-2">90 min</span>
+						</div>
+						<p class="text-sm text-primary font-medium mb-4">
+							Fully credited toward your project within 30 days
+						</p>
+					</div>
+
+					<div class="mb-6 flex-grow">
+						<p class="text-text-light mb-4 text-sm">
+							<strong class="text-text">Ideal for:</strong> DIY clients, budget validation, scope understanding
+						</p>
+						<ul class="space-y-3 text-sm text-text-light">
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								90-minute consultation (virtual or site visit)
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Space analysis and needs assessment
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Preliminary recommendations
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Mood board and concept direction
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Material and color palette suggestions
+							</li>
+						</ul>
+					</div>
+
+					<a href="#booking" class="block text-center px-6 py-3 border-2 border-primary text-primary font-medium uppercase tracking-wider text-sm hover:bg-primary hover:text-black transition-all duration-300 cursor-pointer">
+						Book Consultation
+					</a>
+				</div>
+
+				<!-- Package 2: Design Drawings -->
+				<div class="bg-black border-2 border-border hover:border-primary transition-all duration-300 p-8 flex flex-col">
+					<div class="mb-6">
+						<h3 class="font-heading text-2xl font-bold text-text mb-2">Design Drawings</h3>
+						<div class="flex items-baseline mb-4">
+							<span class="text-4xl font-bold text-primary">₹15K+</span>
+							<span class="text-text-light ml-2">per room</span>
+						</div>
+						<p class="text-sm text-text-light mb-4">
+							Varies by complexity
+						</p>
+					</div>
+
+					<div class="mb-6 flex-grow">
+						<p class="text-text-light mb-4 text-sm">
+							<strong class="text-text">Ideal for:</strong> Clients executing independently, contractors needing professional designs
+						</p>
+						<ul class="space-y-3 text-sm text-text-light">
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Detailed floor plans with dimensions
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								3D rendered visualizations (2-3 views per room)
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Material specifications and finishes
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Furniture layout and recommendations
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Digital files (PDF, CAD, 3D renders)
+							</li>
+						</ul>
+					</div>
+
+					<a href="#booking" class="block text-center px-6 py-3 border-2 border-primary text-primary font-medium uppercase tracking-wider text-sm hover:bg-primary hover:text-black transition-all duration-300 cursor-pointer">
+						Get Started
+					</a>
+				</div>
+
+				<!-- Package 3: Design + Execution Partnership -->
+				<div class="bg-gradient-primary text-black border-2 border-primary p-8 flex flex-col relative">
+					<div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-black text-primary text-xs font-bold uppercase tracking-wider">
+						Most Popular
+					</div>
+					<div class="mb-6">
+						<h3 class="font-heading text-2xl font-bold mb-2">Design + Partnership</h3>
+						<div class="flex items-baseline mb-4">
+							<span class="text-4xl font-bold">6-10%</span>
+							<span class="ml-2 opacity-80">of project cost</span>
+						</div>
+						<p class="text-sm opacity-80 mb-4">
+							You manage vendors with our guidance
+						</p>
+					</div>
+
+					<div class="mb-6 flex-grow">
+						<p class="mb-4 text-sm opacity-90">
+							<strong>Ideal for:</strong> Hands-on clients seeking professional guidance
+						</p>
+						<ul class="space-y-3 text-sm">
+							<li class="flex items-start">
+								<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Complete design package (as above)
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Vendor coordination and sourcing assistance
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Site visit supervision (periodic)
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Material procurement guidance
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Quality check consultations
+							</li>
+						</ul>
+					</div>
+
+					<a href="#booking" class="block text-center px-6 py-3 bg-black text-primary font-medium uppercase tracking-wider text-sm hover:bg-surface transition-all duration-300 cursor-pointer">
+						Book Consultation
+					</a>
+				</div>
+
+				<!-- Package 4: Turnkey -->
+				<div class="bg-black border-2 border-border hover:border-primary transition-all duration-300 p-8 flex flex-col">
+					<div class="mb-6">
+						<h3 class="font-heading text-2xl font-bold text-text mb-2">Turnkey Solution</h3>
+						<div class="flex items-baseline mb-4">
+							<span class="text-4xl font-bold text-primary">10-15%</span>
+							<span class="text-text-light ml-2">of project cost</span>
+						</div>
+						<p class="text-sm text-text-light mb-4">
+							Hassle-free, complete solution
+						</p>
+					</div>
+
+					<div class="mb-6 flex-grow">
+						<p class="text-text-light mb-4 text-sm">
+							<strong class="text-text">Ideal for:</strong> Busy professionals, minimal involvement desired
+						</p>
+						<ul class="space-y-3 text-sm text-text-light">
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Complete design-to-delivery solution
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								End-to-end project management
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Daily site supervision
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Material procurement and delivery
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Single point of contact, guaranteed timeline
+							</li>
+						</ul>
+					</div>
+
+					<a href="#booking" class="block text-center px-6 py-3 border-2 border-primary text-primary font-medium uppercase tracking-wider text-sm hover:bg-primary hover:text-black transition-all duration-300 cursor-pointer">
+						Get Started
+					</a>
+				</div>
+			</div>
+
+			<!-- Trust Elements -->
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto text-center">
+				<div class="p-6">
+					<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+						</svg>
+					</div>
+					<p class="text-sm text-text-light">All consultations backed by detailed documentation</p>
+				</div>
+				<div class="p-6">
+					<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+						</svg>
+					</div>
+					<p class="text-sm text-text-light">Clear contracts with defined deliverables</p>
+				</div>
+				<div class="p-6">
+					<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+						<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+						</svg>
+					</div>
+					<p class="text-sm text-text-light">No hidden costs or surprise markups</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ Section -->
+	<section class="py-section px-4 bg-black border-t border-border">
+		<div class="max-w-4xl mx-auto">
+			<div class="text-center mb-16">
+				<h2 class="font-heading text-4xl md:text-6xl font-bold text-text mb-4">
+					Frequently Asked Questions
+				</h2>
+				<p class="text-lg text-text-light">
+					Everything you need to know about our process and services.
+				</p>
+			</div>
+
+			<div class="space-y-6">
+				<!-- FAQ 1 -->
+				<details class="bg-surface border border-border p-6 cursor-pointer group">
+					<summary class="font-heading text-xl font-semibold text-text list-none flex justify-between items-center">
+						Do you offer free site visits?
+						<svg class="w-6 h-6 text-primary transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+						</svg>
+					</summary>
+					<div class="mt-4 text-text-light leading-relaxed space-y-3">
+						<p>
+							We believe in valuing both your time and ours. Our initial consultation (₹2,999) ensures dedicated
+							focus on your project needs, with no distractions or rushed assessments. This investment demonstrates
+							mutual commitment and is fully credited when you proceed with design services.
+						</p>
+						<p>
+							This approach allows us to:
+						</p>
+						<ul class="list-disc pl-6 space-y-1">
+							<li>Provide undivided professional attention to your project</li>
+							<li>Prepare thoroughly by reviewing your space and requirements</li>
+							<li>Deliver actionable recommendations, not just general ideas</li>
+							<li>Filter serious inquiries for quality service delivery</li>
+						</ul>
+						<p class="text-primary font-medium">
+							Think of it as your first investment in creating the space you've always envisioned.
+						</p>
+					</div>
+				</details>
+
+				<!-- FAQ 2 -->
+				<details class="bg-surface border border-border p-6 cursor-pointer group">
+					<summary class="font-heading text-xl font-semibold text-text list-none flex justify-between items-center">
+						How does the consultation fee work?
+						<svg class="w-6 h-6 text-primary transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+						</svg>
+					</summary>
+					<div class="mt-4 text-text-light leading-relaxed">
+						<p>
+							Our ₹2,999 consultation fee covers a comprehensive 90-minute session where we analyze your space,
+							understand your needs, and provide preliminary design direction with mood boards and material suggestions.
+							If you decide to proceed with any of our design packages within 30 days, this fee is fully credited
+							toward your project cost. It's a win-win approach that ensures serious commitment from both sides.
+						</p>
+					</div>
+				</details>
+
+				<!-- FAQ 3 -->
+				<details class="bg-surface border border-border p-6 cursor-pointer group">
+					<summary class="font-heading text-xl font-semibold text-text list-none flex justify-between items-center">
+						Why don't you have a physical office?
+						<svg class="w-6 h-6 text-primary transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+						</svg>
+					</summary>
+					<div class="mt-4 text-text-light leading-relaxed space-y-3">
+						<p>
+							We operate as a virtual-first boutique design studio — an intentional choice that benefits you directly.
+							By eliminating expensive office overhead, we keep our costs competitive while maintaining premium service quality.
+						</p>
+						<p>
+							All consultations happen at your project site or via video call, ensuring we understand your space in the
+							context it will be experienced. This model allows us to invest in what truly matters: creativity, craftsmanship,
+							and personalized attention to your vision.
+						</p>
+						<p class="text-primary font-medium">
+							68% of independent design consultancies globally now operate this way — it's the future of professional design services.
+						</p>
+					</div>
+				</details>
+
+				<!-- FAQ 4 -->
+				<details class="bg-surface border border-border p-6 cursor-pointer group">
+					<summary class="font-heading text-xl font-semibold text-text list-none flex justify-between items-center">
+						Can I upgrade from one package to another?
+						<svg class="w-6 h-6 text-primary transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+						</svg>
+					</summary>
+					<div class="mt-4 text-text-light leading-relaxed">
+						<p>
+							Absolutely! Many clients start with a consultation or design drawings package and later upgrade to
+							our partnership or turnkey solutions. We'll credit what you've already paid toward the upgraded package,
+							making it seamless to scale up as your project evolves.
+						</p>
+					</div>
+				</details>
+
+				<!-- FAQ 5 -->
+				<details class="bg-surface border border-border p-6 cursor-pointer group">
+					<summary class="font-heading text-xl font-semibold text-text list-none flex justify-between items-center">
+						What's included in the Design + Partnership package?
+						<svg class="w-6 h-6 text-primary transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+						</svg>
+					</summary>
+					<div class="mt-4 text-text-light leading-relaxed">
+						<p>
+							This is our most popular package! At 6-10% of project cost, you get complete design drawings,
+							vendor coordination assistance, periodic site supervision, material procurement guidance, and
+							quality check consultations. You manage vendors directly and make payments to them, while we
+							provide professional oversight and ensure quality execution. It's perfect for clients who want
+							to stay involved while having expert guidance throughout the process.
+						</p>
+					</div>
+				</details>
+
+				<!-- FAQ 6 -->
+				<details class="bg-surface border border-border p-6 cursor-pointer group">
+					<summary class="font-heading text-xl font-semibold text-text list-none flex justify-between items-center">
+						Do you offer payment plans?
+						<svg class="w-6 h-6 text-primary transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+						</svg>
+					</summary>
+					<div class="mt-4 text-text-light leading-relaxed">
+						<p>
+							Yes! For larger projects, we structure payments in milestone-based installments tied to project phases
+							(concept approval, final designs, execution stages, completion). This ensures transparency and aligns
+							our progress with your investment. We'll discuss the payment schedule during your consultation.
+						</p>
+					</div>
+				</details>
+
+				<!-- FAQ 7 -->
+				<details class="bg-surface border border-border p-6 cursor-pointer group">
+					<summary class="font-heading text-xl font-semibold text-text list-none flex justify-between items-center">
+						What's not included in these packages?
+						<svg class="w-6 h-6 text-primary transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+						</svg>
+					</summary>
+					<div class="mt-4 text-text-light leading-relaxed">
+						<p>
+							Our design fees are separate from actual material costs, furniture purchases, contractor labor,
+							and execution expenses. We provide transparent cost estimates for all these elements during the
+							design phase, so you know exactly what to expect. Additional services like extra site visits,
+							revision rounds beyond what's included, or material shopping assistance can be added à la carte.
+						</p>
+					</div>
+				</details>
+
+				<!-- FAQ 8 -->
+				<details class="bg-surface border border-border p-6 cursor-pointer group">
+					<summary class="font-heading text-xl font-semibold text-text list-none flex justify-between items-center">
+						How do I get started?
+						<svg class="w-6 h-6 text-primary transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+						</svg>
+					</summary>
+					<div class="mt-4 text-text-light leading-relaxed space-y-3">
+						<p>
+							Getting started is easy:
+						</p>
+						<ol class="list-decimal pl-6 space-y-2">
+							<li><strong>Book a consultation</strong> using the booking form below (₹2,999, credited to your project)</li>
+							<li><strong>We'll meet</strong> at your project site or via video call for a 90-minute deep dive</li>
+							<li><strong>Receive recommendations</strong> and a detailed proposal for your preferred package</li>
+							<li><strong>Approve and begin</strong> the design journey together</li>
+						</ol>
+						<p class="text-primary font-medium">
+							Prefer to chat first? Email us at hello@idnidhi.com for a quick call to discuss your project.
+						</p>
+					</div>
+				</details>
+			</div>
+		</div>
+	</section>
+
+	<!-- Booking Section -->
+	<section id="booking" class="py-section px-4 bg-surface border-t border-border">
+		<div class="max-w-4xl mx-auto">
+			<div class="text-center mb-12">
+				<h2 class="font-heading text-4xl md:text-6xl font-bold text-text mb-4">
+					Schedule Your Consultation
+				</h2>
+				<p class="text-lg text-text-light">
+					Ready to transform your space? Book your consultation session and let's start bringing your vision to life.
+				</p>
+			</div>
+
+			<!-- Zoho Booking Embed -->
+			<div class="bg-black border border-border p-8 rounded-lg">
+				<div class="text-center text-text-light mb-6">
+					<p class="mb-4">
+						Use the booking form below to schedule your consultation at a time that works for you.
+					</p>
+					<p class="text-sm">
+						After booking, you'll receive a confirmation email with payment instructions and preparation details.
+					</p>
+				</div>
+
+				<!-- Placeholder for Zoho Booking integration -->
+				<!-- Replace this div with your actual Zoho Booking embed code -->
+				<div class="zoho-booking-container bg-surface border-2 border-dashed border-border p-12 text-center">
+					<svg class="w-16 h-16 text-primary mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+					</svg>
+					<p class="text-text-light mb-2">Zoho Booking Widget</p>
+					<p class="text-sm text-text-muted">
+						Replace this section with your Zoho Booking embed code
+					</p>
+				</div>
+
+				<!--
+				Example Zoho Booking embed code structure:
+				<iframe src="YOUR_ZOHO_BOOKING_URL" frameborder="0" width="100%" height="600"></iframe>
+				-->
+			</div>
+
+			<!-- Alternative Contact Methods -->
+			<div class="mt-12 text-center">
+				<p class="text-text-light mb-6">
+					Prefer to reach out directly? We'd love to hear from you.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+					<a href="mailto:hello@idnidhi.com" class="inline-flex items-center px-6 py-3 border-2 border-primary text-primary font-medium uppercase tracking-wider text-sm hover:bg-primary hover:text-black transition-all duration-300 cursor-pointer">
+						<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+						</svg>
+						Email Us
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- About Studio Section -->
+	<section class="py-section px-4 bg-black border-t border-border">
+		<div class="max-w-4xl mx-auto text-center">
+			<h2 class="font-heading text-3xl md:text-5xl font-bold text-text mb-6">
+				About Our Virtual-First Studio
+			</h2>
+			<div class="text-lg text-text-light leading-relaxed space-y-4">
+				<p>
+					IdNidhi is a boutique interior design studio based in Vadodara, specializing in residential and
+					commercial spaces that blend timeless elegance with functional living.
+				</p>
+				<p>
+					Led by Principal Designer Nidhi Mehta, our studio operates with a virtual-first approach, allowing
+					us to keep costs competitive while maintaining premium service quality. All consultations happen at
+					your project site or via video call, ensuring we understand your space in the context it will be experienced.
+				</p>
+				<p class="text-primary font-medium">
+					This model allows us to invest in what matters: creativity, craftsmanship, and personalized attention to your vision.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<Footer />
+</BaseLayout>
+
+<style>
+	/* Smooth opening for details elements */
+	details[open] summary ~ * {
+		animation: slideDown 0.3s ease-in-out;
+	}
+
+	@keyframes slideDown {
+		from {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	/* Zoho booking container styling */
+	.zoho-booking-container {
+		min-height: 400px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+</style>
