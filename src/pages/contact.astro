@@ -85,93 +85,134 @@ import Spotlight from '../components/Spotlight.astro';
 				</div>
 			</div>
 
-			<!-- Interactive Package Selector - Tab Based -->
-			<div class="max-w-6xl mx-auto">
-				<!-- Package Tabs - Horizontal scroll on mobile, grid on desktop -->
-				<div class="mb-8">
-					<div class="flex md:grid md:grid-cols-4 gap-3 overflow-x-auto md:overflow-visible pb-2 md:pb-0 scrollbar-hide">
-						<button
-							data-package="estimate"
-							class="package-tab flex-shrink-0 px-6 py-4 bg-surface border-2 border-border text-text font-heading font-semibold text-base md:text-lg rounded-lg hover:border-primary transition-all duration-300 whitespace-nowrap active"
-						>
-							<div class="text-primary text-sm font-mono mb-1">₹2,999</div>
-							Estimate Package
-						</button>
-						<button
-							data-package="plans"
-							class="package-tab flex-shrink-0 px-6 py-4 bg-surface border-2 border-border text-text font-heading font-semibold text-base md:text-lg rounded-lg hover:border-primary transition-all duration-300 whitespace-nowrap"
-						>
-							<div class="text-primary text-sm font-mono mb-1">₹15,000+</div>
-							Design Plans
-						</button>
-						<button
-							data-package="partnership"
-							class="package-tab flex-shrink-0 px-6 py-4 bg-gradient-primary text-black border-2 border-primary font-heading font-semibold text-base md:text-lg rounded-lg hover:shadow-xl transition-all duration-300 whitespace-nowrap relative"
-						>
-							<div class="absolute -top-2 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-white border border-primary text-[10px] font-bold uppercase tracking-wider rounded-full">Popular</div>
-							<div class="text-sm font-mono mb-1 opacity-80 pt-1">6-10%</div>
-							Partnership
-						</button>
-						<button
-							data-package="turnkey"
-							class="package-tab flex-shrink-0 px-6 py-4 bg-surface border-2 border-border text-text font-heading font-semibold text-base md:text-lg rounded-lg hover:border-primary transition-all duration-300 whitespace-nowrap"
-						>
-							<div class="text-primary text-sm font-mono mb-1">10-15%</div>
-							Turnkey
-						</button>
-					</div>
-				</div>
+			<!-- Interactive Package Selector - Vertical Sidebar Layout (Desktop) -->
+			<div class="max-w-7xl mx-auto">
+				<!-- Two-Column Layout: Left Sidebar (Tabs) + Right Content -->
+				<div class="grid md:grid-cols-[320px_1fr] gap-6 md:gap-8">
 
-				<!-- Package Content - Shows selected package details -->
-				<div class="relative min-h-[450px]">
+					<!-- Left Sidebar: Package Tabs (Vertical on Desktop, Horizontal Scroll on Mobile) -->
+					<div>
+						<!-- Mobile: Horizontal Scroll -->
+						<div class="md:hidden flex gap-3 overflow-x-auto pb-3 scrollbar-hide mb-6">
+							<button
+								data-package="estimate"
+								class="package-tab flex-shrink-0 px-5 py-3 bg-surface border-2 border-border text-text font-heading font-semibold text-sm rounded-lg hover:border-primary transition-all duration-300 whitespace-nowrap active"
+							>
+								<div class="text-primary text-xs font-mono mb-0.5">₹2,999</div>
+								<div class="text-sm">Estimate</div>
+							</button>
+							<button
+								data-package="plans"
+								class="package-tab flex-shrink-0 px-5 py-3 bg-surface border-2 border-border text-text font-heading font-semibold text-sm rounded-lg hover:border-primary transition-all duration-300 whitespace-nowrap"
+							>
+								<div class="text-primary text-xs font-mono mb-0.5">₹15K+</div>
+								<div class="text-sm">Plans</div>
+							</button>
+							<button
+								data-package="partnership"
+								class="package-tab flex-shrink-0 px-5 py-3 bg-gradient-primary text-black border-2 border-primary font-heading font-semibold text-sm rounded-lg hover:shadow-xl transition-all duration-300 whitespace-nowrap relative"
+							>
+								<div class="absolute -top-1.5 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-white border border-primary text-[9px] font-bold uppercase tracking-wider rounded-full">Popular</div>
+								<div class="text-xs font-mono mb-0.5 opacity-80 pt-2">6-10%</div>
+								<div class="text-sm">Partnership</div>
+							</button>
+							<button
+								data-package="turnkey"
+								class="package-tab flex-shrink-0 px-5 py-3 bg-surface border-2 border-border text-text font-heading font-semibold text-sm rounded-lg hover:border-primary transition-all duration-300 whitespace-nowrap"
+							>
+								<div class="text-primary text-xs font-mono mb-0.5">10-15%</div>
+								<div class="text-sm">Turnkey</div>
+							</button>
+						</div>
+
+						<!-- Desktop: Vertical Stack -->
+						<div class="hidden md:flex flex-col gap-3">
+							<button
+								data-package="estimate"
+								class="package-tab text-left px-6 py-5 bg-surface border-2 border-border text-text font-heading rounded-lg hover:border-primary hover:shadow-lg transition-all duration-300 active"
+							>
+								<div class="text-primary text-sm font-mono mb-1">₹2,999</div>
+								<div class="font-semibold text-lg">Estimate Package</div>
+								<div class="text-xs text-text-muted mt-1">Design + PDF estimate</div>
+							</button>
+							<button
+								data-package="plans"
+								class="package-tab text-left px-6 py-5 bg-surface border-2 border-border text-text font-heading rounded-lg hover:border-primary hover:shadow-lg transition-all duration-300"
+							>
+								<div class="text-primary text-sm font-mono mb-1">₹15,000+</div>
+								<div class="font-semibold text-lg">Design Plans</div>
+								<div class="text-xs text-text-muted mt-1">Complete drawings & renders</div>
+							</button>
+							<button
+								data-package="partnership"
+								class="package-tab text-left px-6 py-5 bg-gradient-primary text-black border-2 border-primary font-heading rounded-lg hover:shadow-xl transition-all duration-300 relative"
+							>
+								<div class="absolute -top-2 left-4 px-3 py-0.5 bg-white border border-primary text-[10px] font-bold uppercase tracking-wider rounded-full">Most Popular</div>
+								<div class="text-sm font-mono mb-1 opacity-80 pt-3">6-10%</div>
+								<div class="font-semibold text-lg">Partnership</div>
+								<div class="text-xs opacity-80 mt-1">We guide, you save</div>
+							</button>
+							<button
+								data-package="turnkey"
+								class="package-tab text-left px-6 py-5 bg-surface border-2 border-border text-text font-heading rounded-lg hover:border-primary hover:shadow-lg transition-all duration-300"
+							>
+								<div class="text-primary text-sm font-mono mb-1">10-15%</div>
+								<div class="font-semibold text-lg">Turnkey</div>
+								<div class="text-xs text-text-muted mt-1">We do everything</div>
+							</button>
+						</div>
+					</div>
+
+					<!-- Right Content Area: Package Details -->
+					<div class="relative min-h-[400px] md:min-h-[520px]">
 					<!-- Estimate Package Content -->
 					<div data-package-content="estimate" class="package-content active absolute inset-0 opacity-100 transition-all duration-500">
-						<div class="bg-white border-2 border-primary p-8 rounded-lg shadow-xl">
-							<div class="mb-6">
-								<h3 class="font-heading text-2xl md:text-3xl font-bold text-black mb-3">Design + Estimate Document</h3>
-								<div class="flex items-baseline mb-2">
-									<span class="text-5xl md:text-6xl font-bold text-black">₹2,999</span>
-									<span class="ml-3 text-lg text-gray-600">Credited back to any package</span>
+						<div class="bg-white border-2 border-primary p-5 md:p-8 rounded-lg shadow-xl">
+							<div class="mb-5 md:mb-6">
+								<h3 class="font-heading text-xl md:text-3xl font-bold text-black mb-2 md:mb-3">Design + Estimate Document</h3>
+								<div class="flex flex-wrap items-baseline gap-2 mb-3">
+									<span class="text-4xl md:text-6xl font-bold text-black">₹2,999</span>
+									<span class="text-sm md:text-lg text-gray-600">Credited back to any package</span>
 								</div>
-								<p class="text-base text-black mt-4 bg-gray-50 p-3 rounded border-l-4 border-primary">
+								<p class="text-sm md:text-base text-black mt-3 md:mt-4 bg-gray-50 p-2.5 md:p-3 rounded border-l-4 border-primary">
 									<strong>Perfect for:</strong> DIY execution with professional guidance
 								</p>
 							</div>
 
-							<ul class="space-y-3 text-base text-black mb-8">
+							<ul class="space-y-2.5 md:space-y-3 text-sm md:text-base text-black mb-6 md:mb-8">
 								<li class="flex items-start">
-									<svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 									</svg>
 									Site visit + measurements (if not done)
 								</li>
 								<li class="flex items-start">
-									<svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 									</svg>
 									90-minute design consultation
 								</li>
 								<li class="flex items-start">
-									<svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 									</svg>
 									Mood board & color palette
 								</li>
 								<li class="flex items-start">
-									<svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 									</svg>
 									Material & furniture recommendations
 								</li>
 								<li class="flex items-start">
-									<svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 									</svg>
 									<strong>Complete estimation document (PDF)</strong>
 								</li>
 							</ul>
 
-							<a href="#booking" class="btn-glow inline-block px-8 py-4 border-2 border-primary text-primary font-medium uppercase tracking-wider text-sm hover:bg-primary hover:text-black hover:scale-105 transition-all duration-300 cursor-pointer rounded">
+							<a href="#booking" class="btn-glow inline-block px-6 md:px-8 py-3 md:py-4 border-2 border-primary text-primary font-medium uppercase tracking-wider text-xs md:text-sm hover:bg-primary hover:text-black hover:scale-105 transition-all duration-300 cursor-pointer rounded">
 								Book This Package
 							</a>
 						</div>
@@ -179,46 +220,46 @@ import Spotlight from '../components/Spotlight.astro';
 
 					<!-- Design Plans Content -->
 					<div data-package-content="plans" class="package-content absolute inset-0 opacity-0 pointer-events-none transition-all duration-500">
-						<div class="bg-white border-2 border-gray-200 p-8 rounded-lg shadow-xl">
-							<div class="mb-6">
-								<h3 class="font-heading text-2xl md:text-3xl font-bold text-black mb-3">Complete Design Plans</h3>
-								<div class="flex items-baseline mb-2">
-									<span class="text-5xl md:text-6xl font-bold text-black">₹15K+</span>
-									<span class="ml-3 text-lg text-gray-600">Per room, varies by size</span>
+						<div class="bg-white border-2 border-gray-200 p-5 md:p-8 rounded-lg shadow-xl">
+							<div class="mb-5 md:mb-6">
+								<h3 class="font-heading text-xl md:text-3xl font-bold text-black mb-2 md:mb-3">Complete Design Plans</h3>
+								<div class="flex flex-wrap items-baseline gap-2 mb-3">
+									<span class="text-4xl md:text-6xl font-bold text-black">₹15K+</span>
+									<span class="text-sm md:text-lg text-gray-600">Per room, varies by size</span>
 								</div>
-								<p class="text-base text-black mt-4 bg-gray-50 p-3 rounded border-l-4 border-primary">
+								<p class="text-sm md:text-base text-black mt-3 md:mt-4 bg-gray-50 p-2.5 md:p-3 rounded border-l-4 border-primary">
 									<strong>Perfect for:</strong> You manage contractors, we give complete plans
 								</p>
 							</div>
 
-							<ul class="space-y-3 text-base text-black mb-8">
+							<ul class="space-y-2.5 md:space-y-3 text-sm md:text-base text-black mb-6 md:mb-8">
 								<li class="flex items-start">
-									<svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 									</svg>
 									Detailed drawings with measurements
 								</li>
 								<li class="flex items-start">
-									<svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 									</svg>
 									3D renders (2-3 views per room)
 								</li>
 								<li class="flex items-start">
-									<svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 									</svg>
 									Material specifications & sources
 								</li>
 								<li class="flex items-start">
-									<svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 									</svg>
 									All files for your carpenter
 								</li>
 							</ul>
 
-							<a href="#booking" class="btn-glow inline-block px-8 py-4 border-2 border-primary text-primary font-medium uppercase tracking-wider text-sm hover:bg-primary hover:text-black hover:scale-105 transition-all duration-300 cursor-pointer rounded">
+							<a href="#booking" class="btn-glow inline-block px-6 md:px-8 py-3 md:py-4 border-2 border-primary text-primary font-medium uppercase tracking-wider text-xs md:text-sm hover:bg-primary hover:text-black hover:scale-105 transition-all duration-300 cursor-pointer rounded">
 								Book This Package
 							</a>
 						</div>
@@ -226,55 +267,55 @@ import Spotlight from '../components/Spotlight.astro';
 
 					<!-- Partnership Content -->
 					<div data-package-content="partnership" class="package-content absolute inset-0 opacity-0 pointer-events-none transition-all duration-500">
-						<div class="bg-gradient-primary text-black border-2 border-primary p-8 rounded-lg shadow-xl relative">
-							<div class="absolute -top-3 left-8 px-4 py-1 bg-white border-2 border-primary text-black text-xs font-bold uppercase tracking-wider rounded-full">
-								Most Popular Choice
+						<div class="bg-gradient-primary text-black border-2 border-primary p-5 md:p-8 rounded-lg shadow-xl relative">
+							<div class="absolute -top-2.5 md:-top-3 left-4 md:left-8 px-3 md:px-4 py-0.5 md:py-1 bg-white border-2 border-primary text-black text-[10px] md:text-xs font-bold uppercase tracking-wider rounded-full">
+								Most Popular
 							</div>
-							<div class="mb-6 pt-2">
-								<h3 class="font-heading text-2xl md:text-3xl font-bold mb-3">Design + We Guide You</h3>
-								<div class="flex items-baseline mb-2">
-									<span class="text-5xl md:text-6xl font-bold">6-10%</span>
-									<span class="ml-3 text-lg opacity-80">Of total project cost</span>
+							<div class="mb-5 md:mb-6 pt-4 md:pt-2">
+								<h3 class="font-heading text-xl md:text-3xl font-bold mb-2 md:mb-3">Design + We Guide You</h3>
+								<div class="flex flex-wrap items-baseline gap-2 mb-3">
+									<span class="text-4xl md:text-6xl font-bold">6-10%</span>
+									<span class="text-sm md:text-lg opacity-80">Of total project cost</span>
 								</div>
-								<p class="text-base mt-4 bg-white/20 p-3 rounded border-l-4 border-black">
+								<p class="text-sm md:text-base mt-3 md:mt-4 bg-white/20 p-2.5 md:p-3 rounded border-l-4 border-black">
 									<strong>Perfect for:</strong> Save money but need expert help
 								</p>
 							</div>
 
-							<ul class="space-y-3 text-base mb-8">
+							<ul class="space-y-2.5 md:space-y-3 text-sm md:text-base mb-6 md:mb-8">
 								<li class="flex items-start">
-									<svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<svg class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 									</svg>
 									Everything from design plans
 								</li>
 								<li class="flex items-start">
-									<svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<svg class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 									</svg>
 									Connect you with good carpenters
 								</li>
 								<li class="flex items-start">
-									<svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<svg class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 									</svg>
 									Regular site visits to check work
 								</li>
 								<li class="flex items-start">
-									<svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<svg class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 									</svg>
 									Help buying materials at best prices
 								</li>
 								<li class="flex items-start">
-									<svg class="w-6 h-6 mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<svg class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 									</svg>
 									You pay workers directly (save money!)
 								</li>
 							</ul>
 
-							<a href="#booking" class="btn-glow btn-primary-glow inline-block px-8 py-4 bg-black text-white font-medium uppercase tracking-wider text-sm hover:bg-gray-900 hover:scale-105 transition-all duration-300 cursor-pointer rounded shadow-md">
+							<a href="#booking" class="btn-glow btn-primary-glow inline-block px-6 md:px-8 py-3 md:py-4 bg-black text-white font-medium uppercase tracking-wider text-xs md:text-sm hover:bg-gray-900 hover:scale-105 transition-all duration-300 cursor-pointer rounded shadow-md">
 								Choose Partnership
 							</a>
 						</div>
@@ -282,52 +323,52 @@ import Spotlight from '../components/Spotlight.astro';
 
 					<!-- Turnkey Content -->
 					<div data-package-content="turnkey" class="package-content absolute inset-0 opacity-0 pointer-events-none transition-all duration-500">
-						<div class="bg-white border-2 border-gray-200 p-8 rounded-lg shadow-xl">
-							<div class="mb-6">
-								<h3 class="font-heading text-2xl md:text-3xl font-bold text-black mb-3">Full Service - We Do Everything</h3>
-								<div class="flex items-baseline mb-2">
-									<span class="text-5xl md:text-6xl font-bold text-black">10-15%</span>
-									<span class="ml-3 text-lg text-gray-600">Of total project cost</span>
+						<div class="bg-white border-2 border-gray-200 p-5 md:p-8 rounded-lg shadow-xl">
+							<div class="mb-5 md:mb-6">
+								<h3 class="font-heading text-xl md:text-3xl font-bold text-black mb-2 md:mb-3">Full Service - We Do Everything</h3>
+								<div class="flex flex-wrap items-baseline gap-2 mb-3">
+									<span class="text-4xl md:text-6xl font-bold text-black">10-15%</span>
+									<span class="text-sm md:text-lg text-gray-600">Of total project cost</span>
 								</div>
-								<p class="text-base text-black mt-4 bg-gray-50 p-3 rounded border-l-4 border-primary">
+								<p class="text-sm md:text-base text-black mt-3 md:mt-4 bg-gray-50 p-2.5 md:p-3 rounded border-l-4 border-primary">
 									<strong>Perfect for:</strong> Busy people with no time to manage
 								</p>
 							</div>
 
-							<ul class="space-y-3 text-base text-black mb-8">
+							<ul class="space-y-2.5 md:space-y-3 text-sm md:text-base text-black mb-6 md:mb-8">
 								<li class="flex items-start">
-									<svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 									</svg>
 									Everything from start to finish
 								</li>
 								<li class="flex items-start">
-									<svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 									</svg>
 									We find and manage all workers
 								</li>
 								<li class="flex items-start">
-									<svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 									</svg>
 									Daily progress updates
 								</li>
 								<li class="flex items-start">
-									<svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 									</svg>
 									We buy all materials for you
 								</li>
 								<li class="flex items-start">
-									<svg class="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 									</svg>
 									Guaranteed completion date
 								</li>
 							</ul>
 
-							<a href="#booking" class="btn-glow inline-block px-8 py-4 border-2 border-primary text-primary font-medium uppercase tracking-wider text-sm hover:bg-primary hover:text-black hover:scale-105 transition-all duration-300 cursor-pointer rounded">
+							<a href="#booking" class="btn-glow inline-block px-6 md:px-8 py-3 md:py-4 border-2 border-primary text-primary font-medium uppercase tracking-wider text-xs md:text-sm hover:bg-primary hover:text-black hover:scale-105 transition-all duration-300 cursor-pointer rounded">
 								Book This Package
 							</a>
 						</div>
