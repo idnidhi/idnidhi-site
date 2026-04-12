@@ -575,6 +575,28 @@ import Spotlight from '../components/Spotlight.astro';
 					<!-- Calendly popup widget script -->
 					<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 					<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+					<!-- Script to add blur effect when Calendly modal opens -->
+					<script is:inline>
+						window.addEventListener('load', function() {
+							// Watch for Calendly modal opening
+							const observer = new MutationObserver(function(mutations) {
+								mutations.forEach(function(mutation) {
+									const overlay = document.querySelector('.calendly-overlay, .calendly-popup-overlay, [class*="calendly-popup"]');
+									if (overlay) {
+										document.body.classList.add('calendly-open');
+									} else {
+										document.body.classList.remove('calendly-open');
+									}
+								});
+							});
+
+							observer.observe(document.body, {
+								childList: true,
+								subtree: true
+							});
+						});
+					</script>
 				</div>
 			</div>
 		</div>
@@ -601,14 +623,30 @@ import Spotlight from '../components/Spotlight.astro';
 	}
 
 	/* Blur background when Calendly modal is active */
-	.calendly-overlay {
-		backdrop-filter: blur(8px);
-		-webkit-backdrop-filter: blur(8px);
+	.calendly-overlay,
+	.calendly-popup-overlay,
+	[class*="calendly"][class*="overlay"] {
+		backdrop-filter: blur(8px) !important;
+		-webkit-backdrop-filter: blur(8px) !important;
+		background-color: rgba(0, 0, 0, 0.5) !important;
 	}
 
-	/* Ensure smooth blur transition */
-	.calendly-overlay.calendly-mobile {
+	/* Mobile variant */
+	.calendly-overlay.calendly-mobile,
+	.calendly-popup-overlay.calendly-mobile {
+		backdrop-filter: blur(8px) !important;
+		-webkit-backdrop-filter: blur(8px) !important;
+	}
+
+	/* Ensure the backdrop is visible and blurred */
+	body.calendly-open::before {
+		content: '';
+		position: fixed;
+		inset: 0;
 		backdrop-filter: blur(8px);
 		-webkit-backdrop-filter: blur(8px);
+		background-color: rgba(0, 0, 0, 0.4);
+		z-index: 9998;
+		pointer-events: none;
 	}
 </style>
