@@ -34,28 +34,28 @@ import Spotlight from '../components/Spotlight.astro';
 			</div>
 
 			<!-- Mobile-Only: Package Filter Buttons -->
-			<div class="md:hidden flex flex-wrap justify-center gap-3 mb-8">
+			<div class="md:hidden flex flex-wrap justify-center gap-3 mb-10 px-4">
 				<button
-					class="package-filter active px-6 py-2 text-sm uppercase tracking-wider font-medium border-2 transition-all duration-300 cursor-pointer"
+					class="package-filter active px-5 py-3 text-[11px] uppercase tracking-widest font-bold border-2 rounded-lg transition-all duration-300 cursor-pointer"
 					data-package="estimate"
 				>
 					Estimate
 				</button>
 				<button
-					class="package-filter px-6 py-2 text-sm uppercase tracking-wider font-medium border-2 transition-all duration-300 cursor-pointer"
+					class="package-filter px-5 py-3 text-[11px] uppercase tracking-widest font-bold border-2 rounded-lg transition-all duration-300 cursor-pointer"
 					data-package="plans"
 				>
 					Design Plans
 				</button>
 				<button
-					class="package-filter px-6 py-2 text-sm uppercase tracking-wider font-medium border-2 transition-all duration-300 cursor-pointer relative"
+					class="package-filter px-5 py-3 text-[11px] uppercase tracking-widest font-bold border-2 rounded-lg transition-all duration-300 cursor-pointer relative"
 					data-package="partnership"
 				>
-					<span class="absolute -top-2 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-primary text-black text-[8px] font-bold uppercase tracking-wider whitespace-nowrap">Popular</span>
+					<span class="absolute -top-2.5 left-1/2 -translate-x-1/2 px-3 py-1 bg-primary text-black text-[10px] font-bold uppercase tracking-wide whitespace-nowrap rounded shadow-lg">Popular</span>
 					Partnership
 				</button>
 				<button
-					class="package-filter px-6 py-2 text-sm uppercase tracking-wider font-medium border-2 transition-all duration-300 cursor-pointer"
+					class="package-filter px-5 py-3 text-[11px] uppercase tracking-widest font-bold border-2 rounded-lg transition-all duration-300 cursor-pointer"
 					data-package="turnkey"
 				>
 					Turnkey
@@ -358,19 +358,27 @@ import Spotlight from '../components/Spotlight.astro';
 		.package-filter {
 			border-color: #D8BFD8;
 			color: #D8BFD8;
-			background-color: transparent;
+			background-color: rgba(0, 0, 0, 0.2);
+			backdrop-filter: blur(4px);
 		}
 
 		.package-filter:hover {
 			background-image: linear-gradient(135deg, #F5E6E8, #D8BFD8, #C0A6B8);
 			color: #000000;
-			border-color: transparent;
+			border-color: #D8BFD8;
+			transform: translateY(-1px);
+			box-shadow: 0 4px 12px rgba(216, 191, 216, 0.3);
 		}
 
 		.package-filter.active {
 			background-image: linear-gradient(135deg, #F5E6E8, #D8BFD8, #C0A6B8);
 			color: #000000;
-			border-color: transparent;
+			border-color: #D8BFD8;
+			box-shadow: 0 2px 8px rgba(216, 191, 216, 0.4);
+		}
+
+		.package-filter:active {
+			transform: translateY(0);
 		}
 
 		/* Hide cards with .hidden class */
