@@ -599,4 +599,16 @@ import Spotlight from '../components/Spotlight.astro';
 			transform: translateY(0);
 		}
 	}
+
+	/* Blur background when Calendly modal is active */
+	.calendly-overlay {
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
+	}
+
+	/* Ensure smooth blur transition */
+	.calendly-overlay.calendly-mobile {
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
+	}
 </style>
