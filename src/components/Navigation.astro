@@ -7,7 +7,10 @@ const navItems = [
 ];
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-border">
+<!-- Skip to main content link for accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-border" role="navigation" aria-label="Main navigation">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex justify-between items-center h-16 md:h-20">
 			<!-- Logo -->
@@ -64,6 +67,16 @@ const navItems = [
 	const mobileMenu = document.getElementById('mobile-menu');
 
 	mobileMenuButton?.addEventListener('click', () => {
-		mobileMenu?.classList.toggle('hidden');
+		const isExpanded = mobileMenu?.classList.toggle('hidden');
+		mobileMenuButton?.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+	});
+
+	// Close mobile menu on escape key
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape' && !mobileMenu?.classList.contains('hidden')) {
+			mobileMenu?.classList.add('hidden');
+			mobileMenuButton?.setAttribute('aria-expanded', 'false');
+			mobileMenuButton?.focus();
+		}
 	});
 </script>

@@ -19,7 +19,7 @@ export default {
 				text: {
 					DEFAULT: '#FFFFFF',
 					light: '#A0A0A0',
-					muted: '#707070',
+					muted: '#8E8E8E', // Fixed: 4.5:1 contrast ratio (was #707070 at 2.8:1)
 				},
 			},
 			backgroundImage: {

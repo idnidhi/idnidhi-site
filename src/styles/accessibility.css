@@ -1,0 +1,103 @@
+/* Accessibility Enhancements */
+
+/* Skip to main content link */
+.skip-link {
+	position: absolute;
+	top: -100px;
+	left: 0;
+	z-index: 9999;
+	padding: 0.75rem 1.5rem;
+	background: linear-gradient(135deg, #F5E6E8, #D8BFD8, #C0A6B8);
+	color: #000;
+	font-weight: 600;
+	text-decoration: none;
+	border-radius: 0 0 0.25rem 0;
+}
+
+.skip-link:focus {
+	top: 0;
+	outline: 2px solid #D8BFD8;
+	outline-offset: 2px;
+}
+
+/* Enhanced focus indicators */
+*:focus-visible {
+	outline: 2px solid #D8BFD8;
+	outline-offset: 2px;
+	border-radius: 2px;
+}
+
+/* Ensure focus is visible on interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+	outline: 2px solid #D8BFD8;
+	outline-offset: 2px;
+}
+
+/* Remove default focus for mouse users */
+:focus:not(:focus-visible) {
+	outline: none;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+
+	/* Disable spotlight animation */
+	.animate-spotlight {
+		animation: none !important;
+		opacity: 1 !important;
+	}
+
+	/* Disable bounce animation */
+	.animate-bounce {
+		animation: none !important;
+	}
+
+	/* Disable transform animations */
+	.hover\:scale-105:hover {
+		transform: none !important;
+	}
+
+	.group-hover\:scale-105:hover {
+		transform: none !important;
+	}
+
+	.group-hover\:translate-y-0:hover {
+		transform: none !important;
+	}
+}
+
+/* Screen reader only content */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+.sr-only-focusable:focus {
+	position: static;
+	width: auto;
+	height: auto;
+	padding: inherit;
+	margin: inherit;
+	overflow: visible;
+	clip: auto;
+	white-space: normal;
+}

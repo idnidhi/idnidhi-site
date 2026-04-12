@@ -1,0 +1,83 @@
+/* Button Component Utilities */
+
+/* Base button styles */
+.btn {
+	@apply inline-block px-8 py-4 font-medium uppercase tracking-wider text-sm transition-all duration-300 cursor-pointer;
+}
+
+/* Primary button with gradient */
+.btn-primary {
+	@apply btn bg-gradient-primary text-black hover:bg-gradient-primary-hover hover:scale-105;
+}
+
+/* Secondary button with border */
+.btn-secondary {
+	@apply btn border-2 border-primary text-primary hover:bg-gradient-primary hover:text-black hover:border-transparent hover:scale-105;
+}
+
+/* Ghost button (text only) */
+.btn-ghost {
+	@apply btn px-4 py-2 text-primary hover:text-white transition-colors;
+}
+
+/* Filter/Toggle button */
+.btn-filter {
+	@apply btn px-6 py-2 border-2 border-primary text-primary bg-transparent;
+}
+
+.btn-filter:hover,
+.btn-filter.active {
+	@apply bg-gradient-primary text-black border-transparent;
+}
+
+/* Button sizes */
+.btn-sm {
+	@apply px-6 py-3 text-xs;
+}
+
+.btn-lg {
+	@apply px-10 py-5 text-base;
+}
+
+/* Disabled state */
+.btn:disabled,
+.btn[disabled] {
+	@apply opacity-50 cursor-not-allowed;
+	pointer-events: none;
+}
+
+/* Loading state */
+.btn-loading {
+	@apply relative;
+}
+
+.btn-loading::after {
+	content: '';
+	position: absolute;
+	right: 1rem;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 1rem;
+	height: 1rem;
+	border: 2px solid currentColor;
+	border-top-color: transparent;
+	border-radius: 50%;
+	animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+	to {
+		transform: translateY(-50%) rotate(360deg);
+	}
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	.btn:hover {
+		transform: none !important;
+	}
+
+	.btn-loading::after {
+		animation: none !important;
+	}
+}
