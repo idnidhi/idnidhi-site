@@ -1,0 +1,721 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import Spotlight from '../components/Spotlight.astro';
+---
+
+<BaseLayout title="Contact - Nidhi Mehta Interior Design" description="Start your interior design journey with transparent pricing. Virtual-first boutique design studio serving Vadodara.">
+	<Navigation />
+
+	<!-- Hero Section - Dark (Preserved) -->
+	<section class="pt-32 pb-12 px-4 bg-black relative overflow-hidden">
+		<Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="#D8BFD8" />
+		<div class="max-w-5xl mx-auto text-center relative z-10">
+			<h1 class="font-heading font-bold text-display-sm md:text-display leading-none tracking-tighter-xl mb-6 text-text">
+				Let's Create Your <span class="bg-gradient-primary bg-clip-text text-transparent">Dream Space</span>
+			</h1>
+			<p class="text-lg md:text-xl text-text-light leading-relaxed max-w-3xl mx-auto">
+				We come to you — no office visits needed. Simple, transparent pricing with no hidden charges or confusing quotes. What you see is what you pay. Choose the package that fits your budget and how involved you want to be.
+			</p>
+		</div>
+	</section>
+
+	<!-- Pricing Section - Black Theme with White Cards -->
+	<section class="py-12 px-4 bg-black border-t border-border">
+		<div class="max-w-7xl mx-auto">
+			<div class="text-center mb-10">
+				<h2 class="font-heading text-3xl md:text-5xl font-bold text-text mb-3">
+					Simple, Honest Pricing
+				</h2>
+				<p class="text-lg text-text-light max-w-2xl mx-auto">
+					No hidden charges. No confusing quotes. What you see is what you pay.
+				</p>
+			</div>
+
+			<!-- Entry Point Package - Featured with Gradient -->
+			<div class="mb-10">
+				<div class="bg-gradient-primary text-black border-2 border-primary p-6 md:p-8 relative  shadow-lg">
+					<div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-white border-2 border-primary text-black text-xs font-bold uppercase tracking-wider ">
+						Start Here
+					</div>
+					<div class="grid md:grid-cols-2 gap-6 items-center">
+						<div class="text-left">
+							<h3 class="font-heading text-2xl md:text-3xl font-bold mb-2">Site Visit & Assessment</h3>
+							<div class="flex items-baseline mb-3">
+								<span class="text-4xl md:text-5xl font-bold">₹499</span>
+								<span class="ml-2 opacity-80">fully credited back</span>
+							</div>
+							<p class="opacity-90 text-base">
+								We visit your property, take measurements, and understand what you want. No written estimate at this stage.
+							</p>
+						</div>
+						<div>
+							<ul class="space-y-2 text-sm md:text-base text-left">
+								<li class="flex items-start">
+									<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									Property visit in Vadodara (or video tour)
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									Professional measurements of your space
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									Discuss your needs, style, and budget
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									General feasibility discussion
+								</li>
+							</ul>
+							<a href="#booking" class="inline-block mt-4 px-6 py-3 bg-black text-white font-medium uppercase tracking-wider text-sm hover:bg-gray-900 transition-all duration-300 cursor-pointer shadow-md">
+								Book Site Visit
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Interactive Package Selector - Unified Card Layout -->
+			<div class="max-w-7xl mx-auto">
+				<!-- Unified Container with Tabs + Content -->
+				<div class="bg-surface/50 border-2 border-border">
+
+					<!-- Left Sidebar: Package Tabs (Vertical on Desktop, Horizontal Scroll on Mobile) -->
+					<div>
+						<!-- Mobile: Horizontal Scroll -->
+						<div class="md:hidden flex gap-3 overflow-x-auto pb-3 scrollbar-hide mb-6">
+							<button
+								data-package="estimate"
+								class="package-tab flex-shrink-0 px-5 py-3 bg-surface border-2 border-border text-text font-heading font-semibold text-sm  hover:border-primary transition-all duration-300 whitespace-nowrap active"
+							>
+								<div class="text-primary text-xs font-mono mb-0.5">₹2,999</div>
+								<div class="text-sm">Estimate</div>
+							</button>
+							<button
+								data-package="plans"
+								class="package-tab flex-shrink-0 px-5 py-3 bg-surface border-2 border-border text-text font-heading font-semibold text-sm  hover:border-primary transition-all duration-300 whitespace-nowrap"
+							>
+								<div class="text-primary text-xs font-mono mb-0.5">₹15K+</div>
+								<div class="text-sm">Plans</div>
+							</button>
+							<button
+								data-package="partnership"
+								class="package-tab flex-shrink-0 px-5 py-3 bg-gradient-primary text-black border-2 border-primary font-heading font-semibold text-sm  hover:shadow-xl transition-all duration-300 whitespace-nowrap relative"
+							>
+								<div class="absolute -top-1.5 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-white border border-primary text-[9px] font-bold uppercase tracking-wider ">Popular</div>
+								<div class="text-xs font-mono mb-0.5 opacity-80 pt-2">6-10%</div>
+								<div class="text-sm">Partnership</div>
+							</button>
+							<button
+								data-package="turnkey"
+								class="package-tab flex-shrink-0 px-5 py-3 bg-surface border-2 border-border text-text font-heading font-semibold text-sm  hover:border-primary transition-all duration-300 whitespace-nowrap"
+							>
+								<div class="text-primary text-xs font-mono mb-0.5">10-15%</div>
+								<div class="text-sm">Turnkey</div>
+							</button>
+						</div>
+
+						<!-- Desktop: Vertical Stack -->
+						<div class="hidden md:flex flex-col gap-3">
+							<button
+								data-package="estimate"
+								class="package-tab text-left px-6 py-5 bg-surface border-2 border-border text-text font-heading  hover:border-primary hover:shadow-lg transition-all duration-300 active"
+							>
+								<div class="text-primary text-sm font-mono mb-1">₹2,999</div>
+								<div class="font-semibold text-lg">Estimate Package</div>
+								<div class="text-xs text-text-muted mt-1">Design + PDF estimate</div>
+							</button>
+							<button
+								data-package="plans"
+								class="package-tab text-left px-6 py-5 bg-surface border-2 border-border text-text font-heading  hover:border-primary hover:shadow-lg transition-all duration-300"
+							>
+								<div class="text-primary text-sm font-mono mb-1">₹15,000+</div>
+								<div class="font-semibold text-lg">Design Plans</div>
+								<div class="text-xs text-text-muted mt-1">Complete drawings & renders</div>
+							</button>
+							<button
+								data-package="partnership"
+								class="package-tab text-left px-6 py-5 bg-gradient-primary text-black border-2 border-primary font-heading  hover:shadow-xl transition-all duration-300 relative"
+							>
+								<div class="absolute -top-2 left-4 px-3 py-0.5 bg-white border border-primary text-[10px] font-bold uppercase tracking-wider ">Most Popular</div>
+								<div class="text-sm font-mono mb-1 opacity-80 pt-3">6-10%</div>
+								<div class="font-semibold text-lg">Partnership</div>
+								<div class="text-xs opacity-80 mt-1">We guide, you save</div>
+							</button>
+							<button
+								data-package="turnkey"
+								class="package-tab text-left px-6 py-5 bg-surface border-2 border-border text-text font-heading  hover:border-primary hover:shadow-lg transition-all duration-300"
+							>
+								<div class="text-primary text-sm font-mono mb-1">10-15%</div>
+								<div class="font-semibold text-lg">Turnkey</div>
+								<div class="text-xs text-text-muted mt-1">We do everything</div>
+							</button>
+						</div>
+					</div>
+
+					<!-- Right Content Area: Package Details -->
+					<div class="relative min-h-[400px] md:min-h-[520px]">
+					<!-- Estimate Package Content -->
+					<div data-package-content="estimate" class="package-content active absolute inset-0 opacity-100 transition-all duration-500">
+						<div class="bg-white border-2 border-primary p-5 md:p-8  shadow-xl">
+							<div class="mb-5 md:mb-6">
+								<h3 class="font-heading text-xl md:text-3xl font-bold text-black mb-2 md:mb-3">Design + Estimate Document</h3>
+								<div class="flex flex-wrap items-baseline gap-2 mb-3">
+									<span class="text-4xl md:text-6xl font-bold text-black">₹2,999</span>
+									<span class="text-sm md:text-lg text-gray-600">Credited back to any package</span>
+								</div>
+								<p class="text-sm md:text-base text-black mt-3 md:mt-4 bg-gray-50 p-2.5 md:p-3 border-l-4 border-primary">
+									<strong>Perfect for:</strong> DIY execution with professional guidance
+								</p>
+							</div>
+
+							<ul class="space-y-2.5 md:space-y-3 text-sm md:text-base text-black mb-6 md:mb-8">
+								<li class="flex items-start">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									Site visit + measurements (if not done)
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									90-minute design consultation
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									Mood board & color palette
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									Material & furniture recommendations
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									<strong>Complete estimation document (PDF)</strong>
+								</li>
+							</ul>
+
+							<a href="#booking" class="btn-glow inline-block px-6 md:px-8 py-3 md:py-4 border-2 border-primary text-primary font-medium uppercase tracking-wider text-xs md:text-sm hover:bg-primary hover:text-black hover:scale-105 transition-all duration-300 cursor-pointer">
+								Book This Package
+							</a>
+						</div>
+					</div>
+
+					<!-- Design Plans Content -->
+					<div data-package-content="plans" class="package-content absolute inset-0 opacity-0 pointer-events-none transition-all duration-500">
+						<div class="bg-white border-2 border-gray-200 p-5 md:p-8  shadow-xl">
+							<div class="mb-5 md:mb-6">
+								<h3 class="font-heading text-xl md:text-3xl font-bold text-black mb-2 md:mb-3">Complete Design Plans</h3>
+								<div class="flex flex-wrap items-baseline gap-2 mb-3">
+									<span class="text-4xl md:text-6xl font-bold text-black">₹15K+</span>
+									<span class="text-sm md:text-lg text-gray-600">Per room, varies by size</span>
+								</div>
+								<p class="text-sm md:text-base text-black mt-3 md:mt-4 bg-gray-50 p-2.5 md:p-3 border-l-4 border-primary">
+									<strong>Perfect for:</strong> You manage contractors, we give complete plans
+								</p>
+							</div>
+
+							<ul class="space-y-2.5 md:space-y-3 text-sm md:text-base text-black mb-6 md:mb-8">
+								<li class="flex items-start">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									Detailed drawings with measurements
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									3D renders (2-3 views per room)
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									Material specifications & sources
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									All files for your carpenter
+								</li>
+							</ul>
+
+							<a href="#booking" class="btn-glow inline-block px-6 md:px-8 py-3 md:py-4 border-2 border-primary text-primary font-medium uppercase tracking-wider text-xs md:text-sm hover:bg-primary hover:text-black hover:scale-105 transition-all duration-300 cursor-pointer">
+								Book This Package
+							</a>
+						</div>
+					</div>
+
+					<!-- Partnership Content -->
+					<div data-package-content="partnership" class="package-content absolute inset-0 opacity-0 pointer-events-none transition-all duration-500">
+						<div class="bg-gradient-primary text-black border-2 border-primary p-5 md:p-8  shadow-xl relative">
+							<div class="absolute -top-2.5 md:-top-3 left-4 md:left-8 px-3 md:px-4 py-0.5 md:py-1 bg-white border-2 border-primary text-black text-[10px] md:text-xs font-bold uppercase tracking-wider ">
+								Most Popular
+							</div>
+							<div class="mb-5 md:mb-6 pt-4 md:pt-2">
+								<h3 class="font-heading text-xl md:text-3xl font-bold mb-2 md:mb-3">Design + We Guide You</h3>
+								<div class="flex flex-wrap items-baseline gap-2 mb-3">
+									<span class="text-4xl md:text-6xl font-bold">6-10%</span>
+									<span class="text-sm md:text-lg opacity-80">Of total project cost</span>
+								</div>
+								<p class="text-sm md:text-base mt-3 md:mt-4 bg-white/20 p-2.5 md:p-3 border-l-4 border-black">
+									<strong>Perfect for:</strong> Save money but need expert help
+								</p>
+							</div>
+
+							<ul class="space-y-2.5 md:space-y-3 text-sm md:text-base mb-6 md:mb-8">
+								<li class="flex items-start">
+									<svg class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									Everything from design plans
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									Connect you with good carpenters
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									Regular site visits to check work
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									Help buying materials at best prices
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									You pay workers directly (save money!)
+								</li>
+							</ul>
+
+							<a href="#booking" class="btn-glow btn-primary-glow inline-block px-6 md:px-8 py-3 md:py-4 bg-black text-white font-medium uppercase tracking-wider text-xs md:text-sm hover:bg-gray-900 hover:scale-105 transition-all duration-300 cursor-pointer shadow-md">
+								Choose Partnership
+							</a>
+						</div>
+					</div>
+
+					<!-- Turnkey Content -->
+					<div data-package-content="turnkey" class="package-content absolute inset-0 opacity-0 pointer-events-none transition-all duration-500">
+						<div class="bg-white border-2 border-gray-200 p-5 md:p-8  shadow-xl">
+							<div class="mb-5 md:mb-6">
+								<h3 class="font-heading text-xl md:text-3xl font-bold text-black mb-2 md:mb-3">Full Service - We Do Everything</h3>
+								<div class="flex flex-wrap items-baseline gap-2 mb-3">
+									<span class="text-4xl md:text-6xl font-bold text-black">10-15%</span>
+									<span class="text-sm md:text-lg text-gray-600">Of total project cost</span>
+								</div>
+								<p class="text-sm md:text-base text-black mt-3 md:mt-4 bg-gray-50 p-2.5 md:p-3 border-l-4 border-primary">
+									<strong>Perfect for:</strong> Busy people with no time to manage
+								</p>
+							</div>
+
+							<ul class="space-y-2.5 md:space-y-3 text-sm md:text-base text-black mb-6 md:mb-8">
+								<li class="flex items-start">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									Everything from start to finish
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									We find and manage all workers
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									Daily progress updates
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									We buy all materials for you
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+									</svg>
+									Guaranteed completion date
+								</li>
+							</ul>
+
+							<a href="#booking" class="btn-glow inline-block px-6 md:px-8 py-3 md:py-4 border-2 border-primary text-primary font-medium uppercase tracking-wider text-xs md:text-sm hover:bg-primary hover:text-black hover:scale-105 transition-all duration-300 cursor-pointer">
+								Book This Package
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Package Selector Script with Auto-Shuffle -->
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const tabs = document.querySelectorAll('.package-tab');
+			const contents = document.querySelectorAll('.package-content');
+			const packages = ['estimate', 'plans', 'partnership', 'turnkey'];
+			let currentIndex = 0;
+			let autoplayInterval = null;
+			let isPaused = false;
+
+			// Function to switch to a specific package
+			function switchToPackage(packageName) {
+				// Remove active from all tabs (both mobile and desktop)
+				tabs.forEach(t => {
+					t.classList.remove('active');
+					// Reset non-partnership tabs to default styles
+					if (t.dataset.package !== 'partnership') {
+						t.classList.remove('border-primary', 'shadow-lg');
+						t.classList.add('border-border');
+					}
+				});
+
+				// Find and activate ALL matching tabs (mobile + desktop)
+				const targetTabs = document.querySelectorAll(`[data-package="${packageName}"]`);
+				targetTabs.forEach(targetTab => {
+					targetTab.classList.add('active');
+					if (packageName !== 'partnership') {
+						targetTab.classList.add('border-primary', 'shadow-lg');
+						targetTab.classList.remove('border-border');
+					}
+				});
+
+				// Hide all contents
+				contents.forEach(content => {
+					content.classList.remove('active');
+					content.classList.add('opacity-0', 'pointer-events-none');
+					content.classList.remove('opacity-100');
+				});
+
+				// Show selected content
+				const selectedContent = document.querySelector(`[data-package-content="${packageName}"]`);
+				if (selectedContent) {
+					setTimeout(() => {
+						selectedContent.classList.add('active', 'opacity-100');
+						selectedContent.classList.remove('opacity-0', 'pointer-events-none');
+					}, 50);
+				}
+
+				// Update current index
+				currentIndex = packages.indexOf(packageName);
+			}
+
+			// Auto-advance to next package
+			function nextPackage() {
+				currentIndex = (currentIndex + 1) % packages.length;
+				switchToPackage(packages[currentIndex]);
+			}
+
+			// Start auto-shuffle
+			function startAutoplay() {
+				if (!autoplayInterval) {
+					autoplayInterval = setInterval(() => {
+						if (!isPaused) {
+							nextPackage();
+						}
+					}, 5000); // Change every 5 seconds
+				}
+			}
+
+			// Stop auto-shuffle
+			function stopAutoplay() {
+				if (autoplayInterval) {
+					clearInterval(autoplayInterval);
+					autoplayInterval = null;
+				}
+			}
+
+			// Manual click handling
+			tabs.forEach(tab => {
+				tab.addEventListener('click', () => {
+					stopAutoplay();
+					switchToPackage(tab.dataset.package);
+					// Restart autoplay after manual interaction
+					setTimeout(() => startAutoplay(), 1000);
+				});
+			});
+
+			// Pause on hover (for both desktop sidebar and content area)
+			const packageSelector = document.querySelector('.grid.md\\:grid-cols-\\[320px_1fr\\]');
+			if (packageSelector) {
+				packageSelector.addEventListener('mouseenter', () => {
+					isPaused = true;
+				});
+
+				packageSelector.addEventListener('mouseleave', () => {
+					isPaused = false;
+				});
+			}
+
+			// Start auto-shuffle on page load
+			startAutoplay();
+		});
+	</script>
+
+	<!-- Custom Styles for Package Selector -->
+	<style>
+		/* Hide scrollbar but keep functionality */
+		.scrollbar-hide {
+			-ms-overflow-style: none;
+			scrollbar-width: none;
+		}
+		.scrollbar-hide::-webkit-scrollbar {
+			display: none;
+		}
+
+		/* Active tab state for non-gradient tabs */
+		.package-tab.active:not([data-package="partnership"]) {
+			border-color: var(--color-primary);
+			box-shadow: 0 10px 15px -3px rgba(216, 191, 216, 0.1);
+		}
+
+		/* Smooth content transitions */
+		.package-content {
+			transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+		}
+
+		/* Mobile: smooth horizontal scrolling */
+		@media (max-width: 768px) {
+			.package-tab {
+				min-width: 160px;
+			}
+		}
+	</style>
+
+	<!-- FAQ & Booking Section - Dark Theme -->
+	<section class="py-12 px-4 bg-black border-t border-border">
+		<div class="max-w-6xl mx-auto">
+			<div class="grid md:grid-cols-2 gap-8">
+				<!-- FAQ Column -->
+				<div>
+					<div class="mb-8">
+						<h2 class="font-heading text-3xl md:text-4xl font-bold text-text mb-3">
+							Common Questions
+						</h2>
+						<p class="text-lg text-text-light">
+							Everything you want to know before we start.
+						</p>
+					</div>
+
+					<div class="space-y-3">
+						<!-- FAQ 1 -->
+						<details class="bg-surface border border-border p-4 cursor-pointer group  hover:border-primary transition-colors">
+							<summary class="font-heading text-base md:text-lg font-semibold text-text list-none flex justify-between items-center">
+								Do you visit for free to see my home?
+								<svg class="w-5 h-5 text-primary transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+								</svg>
+							</summary>
+							<div class="mt-3 text-text-light leading-relaxed text-sm space-y-2">
+								<p>
+									We charge ₹2,999 for the first visit because we take it seriously. In that 90 minutes, we'll give you real design ideas, color suggestions, and a clear plan — not just a quick look around.
+								</p>
+								<p>
+									The best part? If you choose any design package after, this ₹2,999 gets adjusted in your total cost. So it's basically free if you work with us.
+								</p>
+							</div>
+						</details>
+
+						<!-- FAQ 2 -->
+						<details class="bg-surface border border-border p-4 cursor-pointer group  hover:border-primary transition-colors">
+							<summary class="font-heading text-base md:text-lg font-semibold text-text list-none flex justify-between items-center">
+								Why don't you have an office?
+								<svg class="w-5 h-5 text-primary transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+								</svg>
+							</summary>
+							<div class="mt-3 text-text-light leading-relaxed text-sm">
+								<p>
+									We work from home and come to your place instead. This saves us rent, and we pass those savings to you with lower prices. Plus, we need to see your actual space to design it properly — not just show you pictures in an office.
+								</p>
+							</div>
+						</details>
+
+						<!-- FAQ 3 -->
+						<details class="bg-surface border border-border p-4 cursor-pointer group  hover:border-primary transition-colors">
+							<summary class="font-heading text-base md:text-lg font-semibold text-text list-none flex justify-between items-center">
+								Can I upgrade my package later?
+								<svg class="w-5 h-5 text-primary transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+								</svg>
+							</summary>
+							<div class="mt-3 text-text-light leading-relaxed text-sm">
+								<p>
+									Yes! Many people start with just design ideas or plans, then later ask us to help with the full work. We'll credit what you've already paid toward the bigger package.
+								</p>
+							</div>
+						</details>
+
+						<!-- FAQ 4 -->
+						<details class="bg-surface border border-border p-4 cursor-pointer group  hover:border-primary transition-colors">
+							<summary class="font-heading text-base md:text-lg font-semibold text-text list-none flex justify-between items-center">
+								What does 6-10% mean exactly?
+								<svg class="w-5 h-5 text-primary transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+								</svg>
+							</summary>
+							<div class="mt-3 text-text-light leading-relaxed text-sm space-y-2">
+								<p>
+									Let's say your total project will cost ₹2 lakhs (for materials, carpenter, electrician, etc.). With our 6-10% partnership package, our fee would be ₹12,000 to ₹20,000.
+								</p>
+								<p>
+									For that, we give you the complete design, help you find good workers, guide you on buying materials, and regularly check the work quality. You handle the workers directly and pay them, which helps you save money.
+								</p>
+							</div>
+						</details>
+
+						<!-- FAQ 5 -->
+						<details class="bg-surface border border-border p-4 cursor-pointer group  hover:border-primary transition-colors">
+							<summary class="font-heading text-base md:text-lg font-semibold text-text list-none flex justify-between items-center">
+								What's NOT included in your packages?
+								<svg class="w-5 h-5 text-primary transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+								</svg>
+							</summary>
+							<div class="mt-3 text-text-light leading-relaxed text-sm">
+								<p>
+									Our fees are just for the design and our services. The actual cost of materials (wood, tiles, paint), furniture, carpenter's charges, electrician charges — those are separate. We'll tell you exactly how much all of that will cost before we start.
+								</p>
+							</div>
+						</details>
+
+						<!-- FAQ 6 -->
+						<details class="bg-surface border border-border p-4 cursor-pointer group  hover:border-primary transition-colors">
+							<summary class="font-heading text-base md:text-lg font-semibold text-text list-none flex justify-between items-center">
+								Can I pay in installments?
+								<svg class="w-5 h-5 text-primary transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+								</svg>
+							</summary>
+							<div class="mt-3 text-text-light leading-relaxed text-sm">
+								<p>
+									Yes. For bigger projects, we split the payment into parts — some at the start, some when design is ready, some during work, and final payment after everything is done. We'll discuss this when we meet.
+								</p>
+							</div>
+						</details>
+
+						<!-- FAQ 7 -->
+						<details class="bg-surface border border-border p-4 cursor-pointer group  hover:border-primary transition-colors">
+							<summary class="font-heading text-base md:text-lg font-semibold text-text list-none flex justify-between items-center">
+								How do I get started?
+								<svg class="w-5 h-5 text-primary transform group-open:rotate-180 transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+								</svg>
+							</summary>
+							<div class="mt-3 text-text-light leading-relaxed text-sm space-y-2">
+								<p>
+									Simple! Just book a time using the form on the right. We'll meet at your place or do a video call, understand what you want, and give you a detailed plan and price.
+								</p>
+								<p class="text-primary font-medium">
+									Want to chat first? Email us at hello@idnidhi.com
+								</p>
+							</div>
+						</details>
+					</div>
+				</div>
+
+				<!-- Booking Column -->
+				<div id="booking">
+					<div class="mb-6">
+						<h2 class="font-heading text-3xl md:text-4xl font-bold text-text mb-3">
+							Book Your Appointment
+						</h2>
+						<p class="text-lg text-text-light">
+							Pick a time that works for you. We'll call you to confirm.
+						</p>
+					</div>
+
+					<!-- Zoho Booking Embed -->
+					<div class="bg-surface border-2 border-border p-6 ">
+						<div class="text-text-light mb-6 text-sm">
+							<p class="mb-2">
+								Choose your preferred date and time below.
+							</p>
+							<p class="text-xs">
+								You'll get an email confirmation with all the details.
+							</p>
+						</div>
+
+						<!-- Placeholder for Zoho Booking integration -->
+						<div class="zoho-booking-container bg-black border-2 border-dashed border-border p-8 text-center ">
+							<svg class="w-12 h-12 text-primary mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+							</svg>
+							<p class="text-text-light mb-1 font-medium text-sm">Zoho Booking Calendar</p>
+							<p class="text-xs text-text-muted">
+								Add your Zoho Booking embed code here
+							</p>
+						</div>
+					</div>
+
+					<!-- Alternative Contact -->
+					<div class="mt-6">
+						<p class="text-text-light mb-3 text-sm text-center">
+							Or reach out directly:
+						</p>
+						<a href="mailto:hello@idnidhi.com" class="flex items-center justify-center px-6 py-3 bg-gradient-primary text-black font-medium uppercase tracking-wider text-sm hover:opacity-90 transition-all duration-300 cursor-pointer shadow-lg">
+							<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+							</svg>
+							Email Us
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<Footer />
+</BaseLayout>
+
+<style>
+	/* Smooth opening for details elements */
+	details[open] summary ~ * {
+		animation: slideDown 0.3s ease-in-out;
+	}
+
+	@keyframes slideDown {
+		from {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.zoho-booking-container {
+		min-height: 300px;
+	}
+</style>

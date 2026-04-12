@@ -21,329 +21,20 @@ import Spotlight from '../components/Spotlight.astro';
 		</div>
 	</section>
 
-	<!-- Pricing Section - Black Theme with White Cards -->
+	<!-- Pricing Section - Black Theme with Portfolio-Style Filters -->
 	<section class="py-12 px-4 bg-black border-t border-border">
 		<div class="max-w-7xl mx-auto">
 			<div class="text-center mb-10">
 				<h2 class="font-heading text-3xl md:text-5xl font-bold text-text mb-3">
-					Choose Your Package
+					Simple, Honest Pricing
 				</h2>
 				<p class="text-lg text-text-light max-w-2xl mx-auto">
-					Select the level of support that works for you.
+					No hidden charges. No confusing quotes. What you see is what you pay.
 				</p>
 			</div>
 
-			<!-- Interactive Package Selector - Unified Card Layout -->
-			<div class="max-w-7xl mx-auto">
-				<!-- Unified Container with Tabs + Content -->
-				<div class="bg-surface/50 border-2 border-border overflow-visible">
-
-					<!-- Package Selection Tabs -->
-					<div class="border-b-2 border-border overflow-visible pt-3">
-						<!-- Mobile: 2x2 Grid (No Horizontal Scroll) -->
-						<div class="grid grid-cols-2 md:hidden overflow-visible">
-							<button
-								data-package="estimate"
-								class="package-tab px-4 py-4 bg-surface border-r border-b border-border text-text font-heading text-center hover:bg-surface/80 transition-all duration-300 active min-h-[88px] flex flex-col items-center justify-center gap-1"
-							>
-								<div class="text-primary text-xs font-mono">₹2,999</div>
-								<div class="text-sm font-semibold">Estimate</div>
-								<div class="text-[10px] text-text-muted">Design + PDF</div>
-							</button>
-							<button
-								data-package="plans"
-								class="package-tab px-4 py-4 bg-surface border-b border-border text-text font-heading text-center hover:bg-surface/80 transition-all duration-300 min-h-[88px] flex flex-col items-center justify-center gap-1"
-							>
-								<div class="text-primary text-xs font-mono">₹15K+</div>
-								<div class="text-sm font-semibold">Plans</div>
-								<div class="text-[10px] text-text-muted">Full drawings</div>
-							</button>
-							<button
-								data-package="partnership"
-								class="package-tab px-4 py-4 bg-gradient-primary text-black border-r border-border font-heading text-center hover:shadow-lg transition-all duration-300 relative min-h-[88px] flex flex-col items-center justify-center gap-1"
-							>
-								<div class="absolute -top-1.5 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-white border border-primary text-[8px] font-bold uppercase tracking-wider">Popular</div>
-								<div class="text-xs font-mono opacity-80 pt-1">6-10%</div>
-								<div class="text-sm font-semibold">Partnership</div>
-								<div class="text-[10px] opacity-80">We guide you</div>
-							</button>
-							<button
-								data-package="turnkey"
-								class="package-tab px-4 py-4 bg-surface border-border text-text font-heading text-center hover:bg-surface/80 transition-all duration-300 min-h-[88px] flex flex-col items-center justify-center gap-1"
-							>
-								<div class="text-primary text-xs font-mono">10-15%</div>
-								<div class="text-sm font-semibold">Turnkey</div>
-								<div class="text-[10px] text-text-muted">Full service</div>
-							</button>
-						</div>
-
-						<!-- Desktop: Horizontal Row -->
-						<div class="hidden md:grid md:grid-cols-4 overflow-visible">
-							<button
-								data-package="estimate"
-								class="package-tab px-6 py-6 bg-surface border-r-2 border-border text-text font-heading text-center hover:bg-surface/80 transition-all duration-300 active flex flex-col items-center justify-center gap-2"
-							>
-								<div class="text-primary text-sm font-mono">₹2,999</div>
-								<div class="font-semibold text-base">Estimate Package</div>
-								<div class="text-xs text-text-muted">Design + PDF estimate</div>
-							</button>
-							<button
-								data-package="plans"
-								class="package-tab px-6 py-6 bg-surface border-r-2 border-border text-text font-heading text-center hover:bg-surface/80 transition-all duration-300 flex flex-col items-center justify-center gap-2"
-							>
-								<div class="text-primary text-sm font-mono">₹15,000+</div>
-								<div class="font-semibold text-base">Design Plans</div>
-								<div class="text-xs text-text-muted">Complete drawings & renders</div>
-							</button>
-							<button
-								data-package="partnership"
-								class="package-tab px-6 py-6 bg-gradient-primary text-black border-r-2 border-primary font-heading text-center hover:shadow-xl transition-all duration-300 relative flex flex-col items-center justify-center gap-2"
-							>
-								<div class="absolute -top-2 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-white border border-primary text-[10px] font-bold uppercase tracking-wider">Most Popular</div>
-								<div class="text-sm font-mono opacity-80 pt-3">6-10%</div>
-								<div class="font-semibold text-base">Partnership</div>
-								<div class="text-xs opacity-80">We guide, you save</div>
-							</button>
-							<button
-								data-package="turnkey"
-								class="package-tab px-6 py-6 bg-surface text-text font-heading text-center hover:bg-surface/80 transition-all duration-300 flex flex-col items-center justify-center gap-2"
-							>
-								<div class="text-primary text-sm font-mono">10-15%</div>
-								<div class="font-semibold text-base">Turnkey</div>
-								<div class="text-xs text-text-muted">We do everything</div>
-							</button>
-						</div>
-					</div>
-
-					<!-- Content Area: Package Details -->
-					<div class="relative min-h-[400px] md:min-h-[480px] p-6 md:p-8">
-					<!-- Estimate Package Content -->
-					<div data-package-content="estimate" class="package-content active absolute inset-0 opacity-100 transition-all duration-500">
-						<div class="bg-surface p-5 md:p-8 h-full overflow-y-auto">
-							<div class="mb-5 md:mb-6">
-								<h3 class="font-heading text-xl md:text-3xl font-bold text-text mb-2 md:mb-3">Design + Estimate Document</h3>
-								<div class="flex flex-wrap items-baseline gap-2">
-									<span class="text-4xl md:text-6xl font-bold text-text">₹2,999</span>
-									<span class="text-sm md:text-lg text-text-light">Credited back to any package</span>
-								</div>
-							</div>
-
-							<div class="grid md:grid-cols-2 gap-6 md:gap-8">
-								<div>
-									<h4 class="font-heading font-semibold text-text mb-3 text-sm md:text-base">What's Included:</h4>
-									<ul class="space-y-2.5 md:space-y-3 text-sm md:text-base text-text">
-										<li class="flex items-start">
-											<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-											</svg>
-											Site visit + measurements (if not done)
-										</li>
-										<li class="flex items-start">
-											<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-											</svg>
-											90-minute design consultation
-										</li>
-										<li class="flex items-start">
-											<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-											</svg>
-											Mood board & color palette
-										</li>
-										<li class="flex items-start">
-											<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-											</svg>
-											Material & furniture recommendations
-										</li>
-										<li class="flex items-start">
-											<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-											</svg>
-											<strong>Complete estimation document (PDF)</strong>
-										</li>
-									</ul>
-								</div>
-
-								<div class="bg-black/30 p-4 md:p-5 rounded-lg border border-border">
-									<h4 class="font-heading font-semibold text-text mb-2 text-sm md:text-base">Who This Is For:</h4>
-									<p class="text-sm md:text-base text-text-light leading-relaxed">
-										You're handy with execution and enjoy being involved in the process. You want professional design direction and a clear budget breakdown, but you'll handle finding workers and managing the day-to-day execution yourself. This gives you full control while ensuring your vision is professionally guided.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Design Plans Content -->
-					<div data-package-content="plans" class="package-content absolute inset-0 opacity-0 pointer-events-none transition-all duration-500">
-						<div class="bg-surface p-5 md:p-8 h-full overflow-y-auto">
-							<div class="mb-5 md:mb-6">
-								<h3 class="font-heading text-xl md:text-3xl font-bold text-text mb-2 md:mb-3">Complete Design Plans</h3>
-								<div class="flex flex-wrap items-baseline gap-2">
-									<span class="text-4xl md:text-6xl font-bold text-text">₹15K+</span>
-									<span class="text-sm md:text-lg text-text-light">Per room, varies by size</span>
-								</div>
-							</div>
-
-							<div class="grid md:grid-cols-2 gap-6 md:gap-8">
-								<div>
-									<h4 class="font-heading font-semibold text-text mb-3 text-sm md:text-base">What's Included:</h4>
-									<ul class="space-y-2.5 md:space-y-3 text-sm md:text-base text-text">
-										<li class="flex items-start">
-											<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-											</svg>
-											Detailed drawings with measurements
-										</li>
-										<li class="flex items-start">
-											<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-											</svg>
-											3D renders (2-3 views per room)
-										</li>
-										<li class="flex items-start">
-											<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-											</svg>
-											Material specifications & sources
-										</li>
-										<li class="flex items-start">
-											<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-											</svg>
-											All files for your carpenter
-										</li>
-									</ul>
-								</div>
-
-								<div class="bg-black/30 p-4 md:p-5 rounded-lg border border-border">
-									<h4 class="font-heading font-semibold text-text mb-2 text-sm md:text-base">Who This Is For:</h4>
-									<p class="text-sm md:text-base text-text-light leading-relaxed">
-										You have your own trusted contractors and want to manage the work yourself. You need professional design plans with all technical details, 3D visualizations to see the final look, and complete documentation your carpenter can follow. You're confident in overseeing execution but want expert design input.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Partnership Content -->
-					<div data-package-content="partnership" class="package-content absolute inset-0 opacity-0 pointer-events-none transition-all duration-500">
-						<div class="bg-gradient-primary text-black border-2 border-primary p-5 md:p-8 shadow-xl h-full overflow-y-auto relative">
-							<div class="absolute -top-2.5 md:-top-3 left-4 md:left-8 px-3 md:px-4 py-0.5 md:py-1 bg-white border-2 border-primary text-black text-[10px] md:text-xs font-bold uppercase tracking-wider ">
-								Most Popular
-							</div>
-							<div class="mb-5 md:mb-6 pt-4 md:pt-2">
-								<h3 class="font-heading text-xl md:text-3xl font-bold mb-2 md:mb-3">Design + We Guide You</h3>
-								<div class="flex flex-wrap items-baseline gap-2">
-									<span class="text-4xl md:text-6xl font-bold">6-10%</span>
-									<span class="text-sm md:text-lg opacity-80">Of total project cost</span>
-								</div>
-							</div>
-
-							<div class="grid md:grid-cols-2 gap-6 md:gap-8">
-								<div>
-									<h4 class="font-heading font-semibold mb-3 text-sm md:text-base">What's Included:</h4>
-									<ul class="space-y-2.5 md:space-y-3 text-sm md:text-base">
-										<li class="flex items-start">
-											<svg class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-											</svg>
-											Complete design plans & renders
-										</li>
-										<li class="flex items-start">
-											<svg class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-											</svg>
-											Connect you with trusted workers
-										</li>
-										<li class="flex items-start">
-											<svg class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-											</svg>
-											Regular site visits & quality checks
-										</li>
-										<li class="flex items-start">
-											<svg class="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-											</svg>
-											Material sourcing guidance
-										</li>
-									</ul>
-								</div>
-
-								<div class="bg-black/10 p-4 md:p-5 rounded-lg border border-black/30">
-									<h4 class="font-heading font-semibold mb-2 text-sm md:text-base">Who This Is For:</h4>
-									<p class="text-sm md:text-base opacity-90 leading-relaxed">
-										Best of both worlds — professional design and oversight without full turnkey costs. You'll pay workers directly and stay involved, while we guide you on hiring, materials, and quality.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Turnkey Content -->
-					<div data-package-content="turnkey" class="package-content absolute inset-0 opacity-0 pointer-events-none transition-all duration-500">
-						<div class="bg-surface p-5 md:p-8 h-full overflow-y-auto">
-							<div class="mb-5 md:mb-6">
-								<h3 class="font-heading text-xl md:text-3xl font-bold text-text mb-2 md:mb-3">Full Service - We Do Everything</h3>
-								<div class="flex flex-wrap items-baseline gap-2">
-									<span class="text-4xl md:text-6xl font-bold text-text">10-15%</span>
-									<span class="text-sm md:text-lg text-text-light">Of total project cost</span>
-								</div>
-							</div>
-
-							<div class="grid md:grid-cols-2 gap-6 md:gap-8">
-								<div>
-									<h4 class="font-heading font-semibold text-text mb-3 text-sm md:text-base">What's Included:</h4>
-									<ul class="space-y-2.5 md:space-y-3 text-sm md:text-base text-text">
-										<li class="flex items-start">
-											<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-											</svg>
-											Everything from start to finish
-										</li>
-										<li class="flex items-start">
-											<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-											</svg>
-											We find and manage all workers
-										</li>
-										<li class="flex items-start">
-											<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-											</svg>
-											Daily progress updates
-										</li>
-										<li class="flex items-start">
-											<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-											</svg>
-											We buy all materials for you
-										</li>
-										<li class="flex items-start">
-											<svg class="w-5 h-5 md:w-6 md:h-6 text-primary mr-2 md:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-											</svg>
-											Guaranteed completion date
-										</li>
-									</ul>
-								</div>
-
-								<div class="bg-black/30 p-4 md:p-5 rounded-lg border border-border">
-									<h4 class="font-heading font-semibold text-text mb-2 text-sm md:text-base">Who This Is For:</h4>
-									<p class="text-sm md:text-base text-text-light leading-relaxed">
-										Your time is valuable and you prefer to focus on your work or family rather than managing construction. You want a single point of contact who handles everything — from design to handover. You'll approve the plan, and we'll deliver your dream space with guaranteed timelines and daily updates.
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
 			<!-- Entry Point Package - Featured with Gradient -->
-			<div class="mt-10">
+			<div class="mb-10">
 				<div class="bg-gradient-primary text-black border-2 border-primary p-6 md:p-8 relative shadow-lg">
 					<div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-white border-2 border-primary text-black text-xs font-bold uppercase tracking-wider">
 						Start Here
@@ -386,140 +77,317 @@ import Spotlight from '../components/Spotlight.astro';
 									General feasibility discussion
 								</li>
 							</ul>
+							<a href="#booking" class="inline-block mt-4 px-6 py-3 bg-black text-white font-medium uppercase tracking-wider text-sm hover:bg-gray-900 transition-all duration-300 cursor-pointer shadow-md">
+								Book Site Visit
+							</a>
 						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Package Filter Buttons (Portfolio Style) -->
+			<div class="flex flex-wrap justify-center gap-3 mb-8">
+				<button
+					class="package-filter active px-6 py-2 text-sm uppercase tracking-wider font-medium border-2 transition-all duration-300 cursor-pointer"
+					data-package="estimate"
+				>
+					Estimate
+				</button>
+				<button
+					class="package-filter px-6 py-2 text-sm uppercase tracking-wider font-medium border-2 transition-all duration-300 cursor-pointer"
+					data-package="plans"
+				>
+					Design Plans
+				</button>
+				<button
+					class="package-filter px-6 py-2 text-sm uppercase tracking-wider font-medium border-2 transition-all duration-300 cursor-pointer relative"
+					data-package="partnership"
+				>
+					<span class="absolute -top-2 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-primary text-black text-[8px] font-bold uppercase tracking-wider whitespace-nowrap">Popular</span>
+					Partnership
+				</button>
+				<button
+					class="package-filter px-6 py-2 text-sm uppercase tracking-wider font-medium border-2 transition-all duration-300 cursor-pointer"
+					data-package="turnkey"
+				>
+					Turnkey
+				</button>
+			</div>
+
+			<!-- Package Cards (No Overlapping) -->
+			<div class="max-w-5xl mx-auto">
+				<!-- Estimate Package -->
+				<div data-package-card="estimate" class="package-card">
+					<div class="bg-white border-2 border-primary p-6 md:p-8 shadow-xl">
+						<div class="mb-4 md:mb-5">
+							<h3 class="font-heading text-2xl md:text-3xl font-bold text-black mb-2">Design + Estimate Document</h3>
+							<div class="flex flex-wrap items-baseline gap-2 mb-2">
+								<span class="text-4xl md:text-5xl font-bold text-black">₹2,999</span>
+								<span class="text-sm md:text-base text-gray-600">Credited back to any package</span>
+							</div>
+							<p class="text-sm md:text-base text-gray-700 bg-gray-50 p-3 border-l-4 border-primary">
+								<strong>Perfect for:</strong> DIY execution with professional guidance
+							</p>
+						</div>
+
+						<div class="space-y-2 text-sm md:text-base text-black mb-5">
+							<div class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Site visit + measurements
+							</div>
+							<div class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								90-minute design consultation
+							</div>
+							<div class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Mood board & color palette
+							</div>
+							<div class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Material & furniture recommendations
+							</div>
+							<div class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								<strong>Complete estimation document (PDF)</strong>
+							</div>
+						</div>
+
+						<a href="#booking" class="inline-block px-6 md:px-8 py-3 border-2 border-primary text-primary font-medium uppercase tracking-wider text-xs md:text-sm hover:bg-primary hover:text-black transition-all duration-300 cursor-pointer">
+							Book This Package
+						</a>
+					</div>
+				</div>
+
+				<!-- Design Plans Package -->
+				<div data-package-card="plans" class="package-card hidden">
+					<div class="bg-white border-2 border-gray-200 p-6 md:p-8 shadow-xl">
+						<div class="mb-4 md:mb-5">
+							<h3 class="font-heading text-2xl md:text-3xl font-bold text-black mb-2">Complete Design Plans</h3>
+							<div class="flex flex-wrap items-baseline gap-2 mb-2">
+								<span class="text-4xl md:text-5xl font-bold text-black">₹15K+</span>
+								<span class="text-sm md:text-base text-gray-600">Per room, varies by size</span>
+							</div>
+							<p class="text-sm md:text-base text-gray-700 bg-gray-50 p-3 border-l-4 border-primary">
+								<strong>Perfect for:</strong> You manage contractors, we give complete plans
+							</p>
+						</div>
+
+						<div class="space-y-2 text-sm md:text-base text-black mb-5">
+							<div class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Detailed drawings with measurements
+							</div>
+							<div class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								3D renders (2-3 views per room)
+							</div>
+							<div class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Material specifications & sources
+							</div>
+							<div class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								All files for your carpenter
+							</div>
+						</div>
+
+						<a href="#booking" class="inline-block px-6 md:px-8 py-3 border-2 border-primary text-primary font-medium uppercase tracking-wider text-xs md:text-sm hover:bg-primary hover:text-black transition-all duration-300 cursor-pointer">
+							Book This Package
+						</a>
+					</div>
+				</div>
+
+				<!-- Partnership Package -->
+				<div data-package-card="partnership" class="package-card hidden">
+					<div class="bg-gradient-primary text-black border-2 border-primary p-6 md:p-8 shadow-xl relative">
+						<div class="absolute -top-3 left-4 md:left-8 px-3 md:px-4 py-1 bg-white border-2 border-primary text-black text-[10px] md:text-xs font-bold uppercase tracking-wider">
+							Most Popular
+						</div>
+						<div class="mb-4 md:mb-5 pt-2">
+							<h3 class="font-heading text-2xl md:text-3xl font-bold mb-2">Design + We Guide You</h3>
+							<div class="flex flex-wrap items-baseline gap-2 mb-2">
+								<span class="text-4xl md:text-5xl font-bold">6-10%</span>
+								<span class="text-sm md:text-base opacity-80">Of total project cost</span>
+							</div>
+							<p class="text-sm md:text-base bg-white/20 p-3 border-l-4 border-black">
+								<strong>Perfect for:</strong> Save money but need expert help
+							</p>
+						</div>
+
+						<div class="space-y-2 text-sm md:text-base mb-5">
+							<div class="flex items-start">
+								<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Everything from design plans
+							</div>
+							<div class="flex items-start">
+								<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Connect you with good carpenters
+							</div>
+							<div class="flex items-start">
+								<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Regular site visits to check work
+							</div>
+							<div class="flex items-start">
+								<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Help buying materials at best prices
+							</div>
+							<div class="flex items-start">
+								<svg class="w-5 h-5 mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								You pay workers directly (save money!)
+							</div>
+						</div>
+
+						<a href="#booking" class="inline-block px-6 md:px-8 py-3 bg-black text-white font-medium uppercase tracking-wider text-xs md:text-sm hover:bg-gray-900 transition-all duration-300 cursor-pointer shadow-md">
+							Choose Partnership
+						</a>
+					</div>
+				</div>
+
+				<!-- Turnkey Package -->
+				<div data-package-card="turnkey" class="package-card hidden">
+					<div class="bg-white border-2 border-gray-200 p-6 md:p-8 shadow-xl">
+						<div class="mb-4 md:mb-5">
+							<h3 class="font-heading text-2xl md:text-3xl font-bold text-black mb-2">Full Service - We Do Everything</h3>
+							<div class="flex flex-wrap items-baseline gap-2 mb-2">
+								<span class="text-4xl md:text-5xl font-bold text-black">10-15%</span>
+								<span class="text-sm md:text-base text-gray-600">Of total project cost</span>
+							</div>
+							<p class="text-sm md:text-base text-gray-700 bg-gray-50 p-3 border-l-4 border-primary">
+								<strong>Perfect for:</strong> Busy people with no time to manage
+							</p>
+						</div>
+
+						<div class="space-y-2 text-sm md:text-base text-black mb-5">
+							<div class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Everything from start to finish
+							</div>
+							<div class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								We find and manage all workers
+							</div>
+							<div class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Daily progress updates
+							</div>
+							<div class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								We buy all materials for you
+							</div>
+							<div class="flex items-start">
+								<svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+								</svg>
+								Guaranteed completion date
+							</div>
+						</div>
+
+						<a href="#booking" class="inline-block px-6 md:px-8 py-3 border-2 border-primary text-primary font-medium uppercase tracking-wider text-xs md:text-sm hover:bg-primary hover:text-black transition-all duration-300 cursor-pointer">
+							Book This Package
+						</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- Package Selector Script with Auto-Shuffle -->
+	<!-- Package Filter Script (Portfolio Style) -->
 	<script>
 		document.addEventListener('DOMContentLoaded', () => {
-			const tabs = document.querySelectorAll('.package-tab');
-			const contents = document.querySelectorAll('.package-content');
-			const packages = ['estimate', 'plans', 'partnership', 'turnkey'];
-			let currentIndex = 0;
-			let autoplayInterval = null;
-			let isPaused = false;
+			const filterButtons = document.querySelectorAll('.package-filter');
+			const packageCards = document.querySelectorAll('.package-card');
 
-			// Function to switch to a specific package
-			function switchToPackage(packageName) {
-				// Remove active from all tabs (both mobile and desktop)
-				tabs.forEach(t => {
-					t.classList.remove('active');
-				});
+			filterButtons.forEach((button) => {
+				button.addEventListener('click', () => {
+					const selectedPackage = button.getAttribute('data-package');
 
-				// Find and activate ALL matching tabs (mobile + desktop)
-				const targetTabs = document.querySelectorAll(`[data-package="${packageName}"]`);
-				targetTabs.forEach(targetTab => {
-					targetTab.classList.add('active');
-				});
+					// Update active button
+					filterButtons.forEach((btn) => btn.classList.remove('active'));
+					button.classList.add('active');
 
-				// Hide all contents
-				contents.forEach(content => {
-					content.classList.remove('active');
-					content.classList.add('opacity-0', 'pointer-events-none');
-					content.classList.remove('opacity-100');
-				});
-
-				// Show selected content
-				const selectedContent = document.querySelector(`[data-package-content="${packageName}"]`);
-				if (selectedContent) {
-					setTimeout(() => {
-						selectedContent.classList.add('active', 'opacity-100');
-						selectedContent.classList.remove('opacity-0', 'pointer-events-none');
-					}, 50);
-				}
-
-				// Update current index
-				currentIndex = packages.indexOf(packageName);
-			}
-
-			// Auto-advance to next package
-			function nextPackage() {
-				currentIndex = (currentIndex + 1) % packages.length;
-				switchToPackage(packages[currentIndex]);
-			}
-
-			// Start auto-shuffle
-			function startAutoplay() {
-				if (!autoplayInterval) {
-					autoplayInterval = setInterval(() => {
-						if (!isPaused) {
-							nextPackage();
+					// Show selected package card
+					packageCards.forEach((card) => {
+						const cardPackage = card.getAttribute('data-package-card');
+						if (cardPackage === selectedPackage) {
+							card.classList.remove('hidden');
+						} else {
+							card.classList.add('hidden');
 						}
-					}, 5000); // Change every 5 seconds
-				}
-			}
-
-			// Stop auto-shuffle
-			function stopAutoplay() {
-				if (autoplayInterval) {
-					clearInterval(autoplayInterval);
-					autoplayInterval = null;
-				}
-			}
-
-			// Manual click handling
-			tabs.forEach(tab => {
-				tab.addEventListener('click', () => {
-					stopAutoplay();
-					switchToPackage(tab.dataset.package);
-					// Restart autoplay after manual interaction
-					setTimeout(() => startAutoplay(), 1000);
+					});
 				});
 			});
-
-			// Pause on hover (for entire package selector container)
-			const packageSelector = document.querySelector('.bg-surface\\/50.border-2.border-border');
-			if (packageSelector) {
-				packageSelector.addEventListener('mouseenter', () => {
-					isPaused = true;
-				});
-
-				packageSelector.addEventListener('mouseleave', () => {
-					isPaused = false;
-				});
-			}
-
-			// Start auto-shuffle on page load
-			startAutoplay();
 		});
 	</script>
 
-	<!-- Custom Styles for Package Selector -->
+	<!-- Portfolio-Style Filter Buttons CSS -->
 	<style>
-		/* Active tab visual feedback - stronger indication */
-		.package-tab.active:not([data-package="partnership"]) {
-			background-color: rgba(216, 191, 216, 0.15) !important;
-			border-bottom-color: var(--color-primary) !important;
-			border-bottom-width: 3px !important;
-			position: relative;
+		.package-filter {
+			border-color: #D8BFD8;
+			color: #D8BFD8;
+			background-color: transparent;
 		}
 
-		/* Partnership tab active state */
-		.package-tab.active[data-package="partnership"] {
-			box-shadow: 0 4px 12px rgba(216, 191, 216, 0.4) !important;
-			border-bottom-width: 3px !important;
+		.package-filter:hover {
+			background-image: linear-gradient(135deg, #F5E6E8, #D8BFD8, #C0A6B8);
+			color: #000000;
+			border-color: transparent;
 		}
 
-		/* Smooth content transitions */
-		.package-content {
-			transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
+		.package-filter.active {
+			background-image: linear-gradient(135deg, #F5E6E8, #D8BFD8, #C0A6B8);
+			color: #000000;
+			border-color: transparent;
 		}
 
-		/* Touch target spacing - ensure minimum 8px gap */
-		.package-tab {
-			-webkit-tap-highlight-color: rgba(216, 191, 216, 0.2);
+		.package-card {
+			opacity: 1;
+			transform: scale(1);
+			transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
 		}
 
-		/* Responsive adjustments */
-		@media (max-width: 768px) {
-			/* Ensure content is readable on small screens */
-			.package-content {
-				font-size: 0.9rem;
-			}
+		.package-card.hidden {
+			opacity: 0;
+			transform: scale(0.98);
+			pointer-events: none;
+			position: absolute;
+			visibility: hidden;
 		}
 	</style>
 
