@@ -62,10 +62,10 @@ import Spotlight from '../components/Spotlight.astro';
 			</div>
 
 			<!-- Package Cards Grid -->
-			<div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
+			<div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 min-h-[500px] md:min-h-0">
 				<!-- Estimate Package -->
-				<div data-package-card="estimate" class="package-card relative">
-					<div class="bg-white border-2 border-primary p-6 md:p-7 shadow-xl h-full flex flex-col min-h-[380px] md:min-h-[420px] transition-all duration-300 md:hover:shadow-2xl md:hover:border-primary/80 md:hover:-translate-y-1">
+				<div data-package-card="estimate" class="package-card relative transition-opacity duration-300">
+					<div class="bg-white border-2 border-primary p-6 md:p-7 shadow-xl h-full flex flex-col min-h-[380px] md:min-h-[420px] transition-shadow duration-300 md:hover:shadow-2xl">
 						<div class="mb-5">
 							<div class="text-xs uppercase tracking-wider text-gray-500 mb-2 font-medium h-[16px]"></div>
 							<div class="text-3xl md:text-4xl font-bold text-black mb-3">₹2,999</div>
@@ -112,8 +112,8 @@ import Spotlight from '../components/Spotlight.astro';
 				</div>
 
 				<!-- Design Plans Package -->
-				<div data-package-card="plans" class="package-card relative">
-					<div class="bg-white border-2 border-gray-200 p-6 md:p-7 shadow-xl h-full flex flex-col min-h-[380px] md:min-h-[420px] transition-all duration-300 md:hover:shadow-2xl md:hover:border-gray-400 md:hover:-translate-y-1">
+				<div data-package-card="plans" class="package-card relative transition-opacity duration-300">
+					<div class="bg-white border-2 border-gray-200 p-6 md:p-7 shadow-xl h-full flex flex-col min-h-[380px] md:min-h-[420px] transition-shadow duration-300 md:hover:shadow-2xl">
 						<div class="mb-5">
 							<div class="text-xs uppercase tracking-wider text-gray-500 mb-2 font-medium">Per room</div>
 							<div class="text-3xl md:text-4xl font-bold text-black mb-3">₹15,000+</div>
@@ -154,8 +154,8 @@ import Spotlight from '../components/Spotlight.astro';
 				</div>
 
 				<!-- Partnership Package -->
-				<div data-package-card="partnership" class="package-card relative">
-					<div class="bg-gradient-primary text-black border-2 border-primary p-6 md:p-7 shadow-xl relative h-full flex flex-col min-h-[380px] md:min-h-[420px] transition-all duration-300 md:hover:shadow-2xl md:scale-[1.03] md:ring-1 md:ring-primary/30">
+				<div data-package-card="partnership" class="package-card relative transition-opacity duration-300">
+					<div class="bg-gradient-primary text-black border-2 border-primary p-6 md:p-7 shadow-xl relative h-full flex flex-col min-h-[380px] md:min-h-[420px] transition-shadow duration-300 md:hover:shadow-2xl md:scale-[1.03] md:ring-1 md:ring-primary/30">
 						<div class="absolute -top-3 left-0 right-0 mx-auto w-fit px-4 py-1.5 bg-white border-2 border-primary text-black text-[10px] font-bold uppercase tracking-wider">
 							Most Popular
 						</div>
@@ -205,8 +205,8 @@ import Spotlight from '../components/Spotlight.astro';
 				</div>
 
 				<!-- Turnkey Package -->
-				<div data-package-card="turnkey" class="package-card relative">
-					<div class="bg-white border-2 border-gray-200 p-6 md:p-7 shadow-xl h-full flex flex-col min-h-[380px] md:min-h-[420px] transition-all duration-300 md:hover:shadow-2xl md:hover:border-gray-400 md:hover:-translate-y-1">
+				<div data-package-card="turnkey" class="package-card relative transition-opacity duration-300">
+					<div class="bg-white border-2 border-gray-200 p-6 md:p-7 shadow-xl h-full flex flex-col min-h-[380px] md:min-h-[420px] transition-shadow duration-300 md:hover:shadow-2xl">
 						<div class="mb-5">
 							<div class="text-xs uppercase tracking-wider text-gray-500 mb-2 font-medium">Of project cost</div>
 							<div class="text-3xl md:text-4xl font-bold text-black mb-3">10-15%</div>
@@ -314,22 +314,30 @@ import Spotlight from '../components/Spotlight.astro';
 				const isMobile = window.innerWidth < 768;
 
 				if (isMobile) {
-					// On mobile: hide all cards except the active one
+					// On mobile: use opacity and pointer-events to prevent layout shifts
 					const activeButton = document.querySelector('.package-filter.active');
 					const selectedPackage = activeButton ? activeButton.getAttribute('data-package') : 'estimate';
 
 					packageCards.forEach((card) => {
 						const cardPackage = card.getAttribute('data-package-card');
 						if (cardPackage === selectedPackage) {
-							card.classList.remove('hidden');
+							card.style.opacity = '1';
+							card.style.pointerEvents = 'auto';
+							card.style.position = 'relative';
 						} else {
-							card.classList.add('hidden');
+							card.style.opacity = '0';
+							card.style.pointerEvents = 'none';
+							card.style.position = 'absolute';
+							card.style.left = '0';
+							card.style.right = '0';
 						}
 					});
 				} else {
 					// On desktop: show all cards
 					packageCards.forEach((card) => {
-						card.classList.remove('hidden');
+						card.style.opacity = '1';
+						card.style.pointerEvents = 'auto';
+						card.style.position = 'relative';
 					});
 				}
 			}
@@ -369,7 +377,6 @@ import Spotlight from '../components/Spotlight.astro';
 			background-image: linear-gradient(135deg, #F5E6E8, #D8BFD8, #C0A6B8);
 			color: #000000;
 			border-color: #D8BFD8;
-			transform: translateY(-1px);
 			box-shadow: 0 4px 12px rgba(216, 191, 216, 0.3);
 		}
 
@@ -378,15 +385,6 @@ import Spotlight from '../components/Spotlight.astro';
 			color: #000000;
 			border-color: #D8BFD8;
 			box-shadow: 0 2px 8px rgba(216, 191, 216, 0.4);
-		}
-
-		.package-filter:active {
-			transform: translateY(0);
-		}
-
-		/* Hide cards with .hidden class */
-		.package-card.hidden {
-			display: none;
 		}
 	</style>
 
