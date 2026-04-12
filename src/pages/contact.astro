@@ -667,18 +667,48 @@ import Spotlight from '../components/Spotlight.astro';
 					</div>
 
 					<!-- Calendly Booking Widget -->
-					<div class="bg-surface border-2 border-border p-6 ">
-						<div class="text-text-light mb-4 text-sm">
-							<p class="mb-2">
-								Pick a date and time that works for you. We'll call you within 24 hours to confirm.
-							</p>
+					<div class="bg-surface border-2 border-border p-8 md:p-10 text-center">
+						<!-- Icon -->
+						<div class="mb-6 flex justify-center">
+							<div class="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center">
+								<svg class="w-9 h-9 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+								</svg>
+							</div>
 						</div>
 
-						<!-- Calendly inline widget begin -->
-						<div class="calendly-inline-widget" data-url="https://calendly.com/idnidhi?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
-						<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-						<!-- Calendly inline widget end -->
+						<!-- Heading -->
+						<h3 class="font-heading text-2xl md:text-3xl font-bold text-text mb-3">
+							Schedule Your Site Visit
+						</h3>
+
+						<!-- Description -->
+						<p class="text-text-light mb-6 text-sm md:text-base max-w-lg mx-auto">
+							Pick a date and time that works for you. We'll call you within 24 hours to confirm your appointment.
+						</p>
+
+						<!-- Booking Button -->
+						<button
+							onclick="Calendly.initPopupWidget({url: 'https://calendly.com/idnidhi?hide_landing_page_details=1&hide_gdpr_banner=1'});return false;"
+							class="inline-flex items-center justify-center px-8 py-4 bg-gradient-primary text-black font-medium uppercase tracking-wider text-sm hover:opacity-90 transition-all duration-300 cursor-pointer shadow-lg"
+						>
+							<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+							</svg>
+							Book Your Appointment
+						</button>
+
+						<!-- Additional Info -->
+						<div class="mt-6 pt-6 border-t border-border">
+							<p class="text-text-muted text-xs md:text-sm">
+								Investment: <span class="text-primary font-semibold">₹499</span> (fully credited back to any design package)
+							</p>
+						</div>
 					</div>
+
+					<!-- Calendly popup widget script -->
+					<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+					<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
 					<!-- Alternative Contact -->
 					<div class="mt-6">
